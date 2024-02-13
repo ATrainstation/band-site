@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    @include light-OnDark (#fff);
+
+    &__assoc {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+
+   &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+   }
+
+   &__icon {
+    height: 40px;
+    width: auto;
+   }
+
+}
+

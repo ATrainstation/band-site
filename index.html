@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css" type="text/css">
+    <link rel="stylesheet" href="assets/font/AvenirNextLTPro-Regular.otf">
+    <link rel="stylesheet" href="assets/font/AvenirNextLTPro-demi.otf">
+    <link rel="stylesheet" href="assets/font/AvenirNextLTPro-bold.otf">
     <title>The Bees Knees</title>
 
 </head>
@@ -11,12 +14,13 @@
 <body>
     <header>
         <section class="nav">
-            <div>
-            <h2 class="nav__title">BANDSITE</h2>
+            <div class="nav__title">
+                <img src="assets/logo/Logo-bandsite.svg"/>
+                <!-- <h2>BANDSITE</h2> -->
             </div>
             <ul class="nav__links">
-                <li class="nav__page"></li>
-                <li class="nav__page"></li>
+                <a href="" class="nav__link"><li class="nav__page nav__link--active">Biography</li></a>
+                <a href="" class="nav__link"><li class="nav__page">Shows</li></a>
             </ul>
         </section>
 
@@ -32,8 +36,8 @@
             <div class="about__title">
                 <h1>About the Musicians</h1>
             </div>
-            <div class="about__image">
-                <img src="assets/images/band.jpg"/>
+            <div class= "about__container">
+                <img class="about__image" src="assets/images/band.jpg"/>
             </div>
 
             <div class="about__quote">
@@ -53,20 +57,20 @@
                     Photo Gallery
                 </h1>
                 <div class="gallery__photos">
-                    <img src="assets/images/Photo-gallery-1.jpg"/>
-                    <img src="assets/images/Photo-gallery-2.jpg"/>
-                    <img src="assets/images/Photo-gallery-3.jpg"/>
-                    <img src="assets/images/Photo-gallery-4.jpg"/>
-                    <img src="assets/images/Photo-gallery-5.jpg"/>
-                    <img src="assets/images/Photo-gallery-6.jpg"/>
-                    <img src="assets/images/Photo-gallery-7.jpg"/>
-                    <img src="assets/images/Photo-gallery-8.jpg"/>
-                    <img src="assets/images/Photo-gallery-9.jpg"/>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-1.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-2.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-3.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-4.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-5.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-6.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-7.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-8.jpg"/></div>
+                    <div class="gallery__photo"><img src="assets/images/Photo-gallery-9.jpg"/></div>
                 </div>
             </section>
         </main>
 
-            <footer>
+            <footer class="footer">
                 <article class="social">
                     <h2 class="social__title">
                         Get in Touch

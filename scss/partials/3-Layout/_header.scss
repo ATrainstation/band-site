@@ -4,12 +4,36 @@
 
 .nav {
     display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    @include light-OnDark (#fff);
 
     &__title {
-        @include light-OnDark (white);
+        text-align: center;
+        justify-content: center;
+        @include light-OnDark (#fff);
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+
+        &--active {
+            border-bottom: 4px solid #FFF;
+        }
     }
 
     &__page {
-        @include light-OnDark;
+        @include light-OnDark (#fff);
     }
 }

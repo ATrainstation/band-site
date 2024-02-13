@@ -1,0 +1,136 @@
+* {
+  font-family: "Avenir";
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Font/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Font/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/Font/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  background-color: #323232;
+  color: #fff;
+}
+.nav__title {
+  text-align: center;
+  justify-content: center;
+  background-color: #323232;
+  color: #fff;
+}
+.nav__links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+}
+.nav__link {
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+.nav__link--active {
+  border-bottom: 4px solid #FFF;
+}
+.nav__page {
+  background-color: #323232;
+  color: #fff;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+.about__image {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.gallery {
+  justify-content: center;
+}
+.gallery_photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery__photo {
+  display: flex;
+  width: 100%;
+}
+.gallery__photo img {
+  width: 100%;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #323232;
+  color: #fff;
+}
+.footer__assoc {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.social__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.social__icon {
+  height: 40px;
+  width: auto;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,118 @@
+@import "_variables.scss";
+
+// Fonts
+@mixin regular {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+}
+
+@mixin demi {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 600;
+}
+
+@mixin bold {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 700;
+}
+
+// Mobile Text Styles
+@mixin pageHeader {
+    @include bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+} 
+
+@mixin sectionHeader {
+    @include bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+} 
+
+@mixin subheader {
+    @include demi;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+} 
+
+@mixin bodyCopy {
+    @include regular;
+    font-size: 0.813rem;
+    line-height: 0.889rem;
+} 
+
+@mixin footerCopy {
+    @include regular;
+    font-size: 0.813rem;
+    line-height: 0.889rem;
+} 
+
+@mixin special-text {
+    @include bold;
+    font-size: 0.625rem;
+    line-height: 0.8rem;
+} 
+
+
+// Desktop and Tablet Text Styles
+@mixin dt-pageHeader {
+    @include bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+} 
+
+@mixin dt-sectionHeader {
+    @include bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+} 
+
+@mixin dt-subheader {
+    @include demi;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+} 
+
+@mixin dt-bodyCopy {
+    @include regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+} 
+
+@mixin dt-footerCopy {
+    @include regular;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+} 
+
+@mixin dt-special-text {
+    @include bold;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+} 
+
+
+// Buttons
+
+@mixin button ($black) { 
+    background-color: $black;
+    color: $white;
+    height: 40px;
+    border-radius: 4px;
+}
+
+//for above button On hover
+// add $darkblk to parameter
+
+
+// Text and Background Colors
+
+@mixin light-OnDark ($white) {
+    background-color: $black;
+    color: $white;
+}
+
+@mixin dark-OnLight ($white) {
+    background-color: $white;
+    color: $black;
+}

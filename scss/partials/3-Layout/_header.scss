@@ -1,0 +1,15 @@
+@import "../1-Helpers/_variables.scss";
+@import "../1-Helpers/_mixins.scss";
+
+
+.nav {
+    display: flex;
+
+    &__title {
+        @include light-OnDark (white);
+    }
+
+    &__page {
+        @include light-OnDark;
+    }
+}

@@ -8,6 +8,19 @@
     padding-top: 16px;
     @include light-OnDark (#fff);
 
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    @media (min-width: 1280px) {
+        position: fixed;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 3.5rem;
+        width: 100%;
+    }
+
     &__title {
         text-align: center;
         @include light-OnDark (#fff);

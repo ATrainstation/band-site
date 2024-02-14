@@ -34,6 +34,21 @@ li {
   background-color: #323232;
   color: #fff;
 }
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1280px) {
+  .nav {
+    position: fixed;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 3.5rem;
+    width: 100%;
+  }
+}
 .nav__title {
   text-align: center;
   background-color: #323232;
@@ -178,6 +193,17 @@ li {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 0.889rem;
+}
+.footer__info__name {
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 0.889rem;
+  font-weight: 600;
 }
 .footer__info__area {
   padding: 1rem 0;
@@ -186,6 +212,12 @@ li {
   height: 7vh;
   width: auto;
   padding-bottom: 1rem;
+}
+.footer__copyright {
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 0.889rem;
 }
 
 .social {

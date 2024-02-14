@@ -10,8 +10,12 @@
 
     &__title {
         text-align: center;
-        justify-content: center;
         @include light-OnDark (#fff);
+    }
+
+    &__title img{
+        height: 5vh;
+        width: auto;
     }
 
     &__links {
@@ -19,8 +23,10 @@
         justify-content: space-evenly;
         width: 100%;
         margin: 0;
-        padding: 0;
-        padding-top: 1rem;
+    }
+
+    &__links li {
+        padding: 1rem 0;
     }
 
     &__link {
@@ -36,4 +42,22 @@
     &__page {
         @include light-OnDark (#fff);
     }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    background-image: url("../../../assets/images/hero-bio.jpg");
+    background-size: cover;
+    margin: 0;
+    padding-left: 1rem;
+    
+    &__title {
+        @include dt-subheader;
+        font-size: 2rem;
+        color: $white;
+        
+    }
+
 }

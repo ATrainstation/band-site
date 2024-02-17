@@ -18,8 +18,8 @@
 
 // Mobile Text Styles
 @mixin pageHeader {
-    @include bold;
-    font-size: 2.25rem;
+    @include demi;
+    font-size: 1.75rem;
     line-height: 2.75rem;
 } 
 
@@ -43,8 +43,8 @@
 
 @mixin footerCopy {
     @include regular;
-    font-size: 0.813rem;
-    line-height: 0.889rem;
+    font-size: 1rem;
+    line-height: 1rem;
 } 
 
 @mixin special-text {
@@ -56,15 +56,15 @@
 
 // Desktop and Tablet Text Styles
 @mixin dt-pageHeader {
-    @include bold;
+    @include demi;
     font-size: 3.75rem;
     line-height: 4.25rem;
 } 
 
 @mixin dt-sectionHeader {
-    @include bold;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    @include demi;
+    font-size: 2.6rem;
+    line-height: 3.5rem;
 } 
 
 @mixin dt-subheader {

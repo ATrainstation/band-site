@@ -1,9 +1,8 @@
-
 .about {
     display: flex;
     flex-wrap: wrap;
     padding: 0 1rem;
-    
+
 
     &__title {
         @include sectionHeader;
@@ -12,17 +11,17 @@
     }
 
     &__container {
-     width: 100%;
-     height: auto;
-     
+        width: 100%;
+        height: auto;
+
     }
 
 
     &__image {
-    width: 100%;
-    height: auto;
-}
-  
+        width: 100%;
+        height: auto;
+    }
+
 
     &__quote {
         font-weight: 600;
@@ -42,21 +41,17 @@
         font-size: 1.3rem;
         font-weight: 550;
         padding-bottom: 1rem;
-        
+
     }
 
     &__bio__para1 {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
+        @include bodyCopy;
         padding-bottom: 1rem;
-        font-weight: 400;
     }
 
     &__bio__para2 {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
+        @include bodyCopy;
         padding-bottom: 1rem;
-        font-weight: 400;
     }
 }
 
@@ -70,21 +65,89 @@
         padding-top: 1.5rem;
         padding-bottom: 1rem;
     }
-    
+
     &_photos {
-    display: flex;
-    flex-wrap: wrap; 
-}
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__photo {
-    display: flex;
-    width: 100%;
-    
-}
+        display: flex;
+        width: 100%;
+    }
 
     &__photo img {
-    width: 100%;
-    padding-bottom: 1rem;
-    
+        width: 100%;
+        height: auto;
+        padding-bottom: 1rem;
+
+    }
 }
+
+@media (min-width: 768px) {
+    .about {
+        padding: 0 3rem;
+
+        &__title {
+            padding-top: 2.8rem;
+            padding-bottom: 1.8rem;
+            @include dt-sectionHeader;
+        }
+
+        &__container {
+            padding: 0 4rem;
+        }
+
+        &__quote {
+            padding: 1rem 4rem;
+        }
+
+        &__bio {
+            padding: 1rem 4rem;
+        }
+
+        &__bio__paras {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            @include dt-bodyCopy;
+        }
+    }
+
+    .gallery {
+
+        &__title {
+            padding-left: 1.65rem;
+        }
+
+        &__photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &__photo {
+            width: 30%;
+        }
+    }
+
+}
+
+@media (min-width: 1280px) {
+    
+    .about {
+        padding: 0 12rem;
+        @include dt-sectionHeader;
+    }
+
+    .gallery {
+        padding: 0 6rem;
+
+        &__title {
+            padding-top: 2rem;
+            padding-left: 2.5rem;
+        }
+    }
 }

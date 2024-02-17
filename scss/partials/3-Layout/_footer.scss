@@ -45,6 +45,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
+    gap: 2rem;
 
     &__title {
         font-size: 2rem;
@@ -60,9 +61,44 @@
    }
 
    &__icon {
-    height: 30px;
+    height: 40px;
     width: auto;
    }
 
 }
 
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+           
+    &__assoc {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    &__container__logo {
+        align-self: center;
+        order: -1;
+        padding-right: 1rem;
+    }
+
+    &__copyright {
+        padding-top: 2rem;
+    }
+}
+
+}
+    .social {
+        flex-wrap: wrap;
+        flex-direction: row;
+        order: -2;
+
+    &__icons {
+        flex-direction: row;
+    }
+}

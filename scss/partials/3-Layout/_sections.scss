@@ -7,28 +7,25 @@
     &__title {
         @include sectionHeader;
         padding-top: 1.5rem;
-        padding-bottom: 1rem;
     }
 
     &__container {
-        width: 100%;
-        height: auto;
-
+    overflow: hidden;
+    height: 40%;
     }
 
-
-    &__image {
-        width: 100%;
-        height: auto;
+    &__image {   
+        width: 100%;  
+        height: auto;  
+        object-position: center bottom;
     }
 
 
     &__quote {
+        justify-self: center;
         font-weight: 600;
         font-size: 1.2rem;
         line-height: 2rem;
-
-        padding-top: 1.5rem;
         padding-bottom: 1.4rem;
     }
 
@@ -90,16 +87,20 @@
 
         &__title {
             padding-top: 2.8rem;
-            padding-bottom: 1.8rem;
             @include dt-sectionHeader;
         }
 
-        &__container {
+        &__contatiner {
+            width: 100%;
+            height: auto;
+        }
+    
+        &__image {
             padding: 0 4rem;
         }
 
         &__quote {
-            padding: 1rem 4rem;
+            padding: 0 4rem;
         }
 
         &__bio {

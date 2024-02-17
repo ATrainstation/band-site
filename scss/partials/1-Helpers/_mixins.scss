@@ -43,7 +43,7 @@
 
 @mixin footerCopy {
     @include regular;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1rem;
 } 
 
@@ -81,7 +81,7 @@
 
 @mixin dt-footerCopy {
     @include regular;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.25rem;
 } 
 

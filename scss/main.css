@@ -69,7 +69,7 @@ li {
 .hero {
   display: flex;
   align-items: center;
-  height: 23vh;
+  height: 40vh;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   margin: 0;
@@ -108,7 +108,7 @@ li {
     padding-bottom: 1.5rem;
   }
   .hero {
-    height: 55vh;
+    height: 66vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;
@@ -119,7 +119,7 @@ li {
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 77vh;
+    height: 96vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;
@@ -140,21 +140,22 @@ li {
   font-size: 1.9rem;
   line-height: 2.75rem;
   padding-top: 1.5rem;
-  padding-bottom: 1rem;
 }
 .about__container {
-  width: 100%;
-  height: auto;
+  overflow: hidden;
+  height: 40%;
 }
 .about__image {
   width: 100%;
   height: auto;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 .about__quote {
+  justify-self: center;
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding-top: 1.5rem;
   padding-bottom: 1.4rem;
 }
 .about__bio {
@@ -217,17 +218,20 @@ li {
   }
   .about__title {
     padding-top: 2.8rem;
-    padding-bottom: 1.8rem;
     font-family: "Avenir", sans-serif;
     font-weight: 600;
     font-size: 2.6rem;
     line-height: 3.5rem;
   }
-  .about__container {
+  .about__contatiner {
+    width: 100%;
+    height: auto;
+  }
+  .about__image {
     padding: 0 4rem;
   }
   .about__quote {
-    padding: 1rem 4rem;
+    padding: 0 4rem;
   }
   .about__bio {
     padding: 1rem 4rem;
@@ -281,49 +285,51 @@ li {
 .footer__assoc {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
+  padding: 0.3rem 0;
 }
 .footer__info {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
   font-family: "Avenir", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1rem;
+  padding: 1rem 0;
 }
 .footer__info__name {
   font-family: "Avenir", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .footer__info__area {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 .footer__logo {
   height: 7vh;
   width: auto;
-  padding-bottom: 1rem;
+  align-self: center;
+  padding-top: 1rem;
 }
 .footer__copyright {
   font-family: "Avenir", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1rem;
+  padding-top: 1rem;
 }
 
 .social {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
-  gap: 2rem;
 }
 .social__title {
+  width: 100%;
+  padding-bottom: 1.5rem;
   font-size: 2rem;
-  font-weight: 600;
-  padding-bottom: 1rem;
 }
 .social__icons {
   display: flex;
@@ -332,7 +338,7 @@ li {
   gap: 1.9rem;
 }
 .social__icon {
-  height: 40px;
+  height: 25px;
   width: auto;
 }
 
@@ -340,29 +346,66 @@ li {
   .footer {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 2rem 2rem;
   }
   .footer__assoc {
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 0.5rem;
     width: 100%;
-    padding: 0;
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .footer__info {
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
   .footer__container__logo {
-    align-self: center;
+    display: flex;
+    align-self: flex-start;
     order: -1;
     padding-right: 1rem;
+    width: 30%;
+  }
+  .footer__logo {
+    align-self: center;
+    padding-left: 7rem;
   }
   .footer__copyright {
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
     padding-top: 2rem;
   }
+  .social {
+    width: 70%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    order: -2;
+  }
+  .social__title {
+    width: 50%;
+  }
+  .social__icons {
+    width: 50%;
+    flex-direction: row;
+    padding-bottom: 1rem;
+  }
 }
-.social {
-  flex-wrap: wrap;
-  flex-direction: row;
-  order: -2;
-}
-.social__icons {
-  flex-direction: row;
+@media (min-width: 1280px) {
+  .footer {
+    justify-content: flex-start;
+  }
+  .footer__assoc {
+    width: 70%;
+  }
+  .footer__copyright {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

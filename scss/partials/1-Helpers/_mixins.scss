@@ -25,7 +25,7 @@
 
 @mixin sectionHeader {
     @include demi;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     line-height: 2.75rem;
 } 
 
@@ -57,7 +57,7 @@
 // Desktop and Tablet Text Styles
 @mixin dt-pageHeader {
     @include demi;
-    font-size: 3.75rem;
+    font-size: 4.75rem;
     line-height: 4.25rem;
 } 
 

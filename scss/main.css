@@ -1,6 +1,5 @@
 * {
   font-family: "Avenir";
-  min-width: 0;
 }
 
 li {
@@ -26,6 +25,7 @@ li {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 .nav {
@@ -42,7 +42,13 @@ li {
 }
 .nav__title img {
   height: 4vh;
+  max-height: 20px;
+  max-width: 120px;
   width: auto;
+}
+.nav__page {
+  background-color: #323232;
+  color: #fff;
 }
 .nav__links {
   display: flex;
@@ -50,27 +56,25 @@ li {
   width: 100%;
   margin: 0;
 }
-.nav__links li {
+.nav__page {
   padding: 1rem 0;
+}
+.nav__page--inactive {
+  color: #AFAFAF;
 }
 .nav__link {
   text-decoration: none;
-  width: 100%;
   text-align: center;
 }
 .nav__link--active {
-  border-bottom: 4px solid #FFF;
-}
-.nav__page {
-  background-color: #323232;
-  color: #fff;
+  border-bottom: 5px solid #FFF;
 }
 
 .hero {
   display: flex;
   align-items: center;
-  height: 40vh;
-  background-image: url("../assets/images/hero-bio.jpg");
+  height: 25vh;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-size: cover;
   margin: 0;
 }
@@ -100,33 +104,36 @@ li {
   .nav__links {
     display: flex;
     justify-content: space-evenly;
-    width: 20%;
+    width: 30%;
     margin-left: 6rem;
-    gap: 3.5rem;
   }
-  .nav__links li {
+  .nav__page {
     padding-bottom: 1.5rem;
   }
+  .nav__link--active {
+    max-width: 87px;
+  }
   .hero {
-    height: 66vh;
+    height: 58vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;
     font-weight: 600;
-    font-size: 3.75rem;
+    font-size: 4.75rem;
     line-height: 4.25rem;
+    padding-left: 2rem;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 96vh;
+    height: 98vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;
     font-weight: 600;
-    font-size: 3.75rem;
+    font-size: 4.75rem;
     line-height: 4.25rem;
-    padding-left: 9rem;
+    padding-left: 12rem;
   }
 }
 .about {
@@ -137,7 +144,7 @@ li {
 .about__title {
   font-family: "Avenir", sans-serif;
   font-weight: 600;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   line-height: 2.75rem;
   padding-top: 1.5rem;
 }
@@ -148,8 +155,6 @@ li {
 .about__image {
   width: 100%;
   height: auto;
-  -o-object-position: center bottom;
-     object-position: center bottom;
 }
 .about__quote {
   justify-self: center;
@@ -193,7 +198,7 @@ li {
 .gallery__title {
   font-family: "Avenir", sans-serif;
   font-weight: 600;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   line-height: 2.75rem;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -308,7 +313,8 @@ li {
   padding: 1.5rem 0;
 }
 .footer__logo {
-  height: 7vh;
+  height: 36px;
+  min-height: 36px;
   width: auto;
   align-self: center;
   padding-top: 1rem;
@@ -327,7 +333,7 @@ li {
   padding: 1rem 0;
 }
 .social__title {
-  width: 100%;
+  width: 50%;
   padding-bottom: 1.5rem;
   font-size: 2rem;
 }
@@ -336,6 +342,7 @@ li {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1.9rem;
+  padding-top: 0.2rem;
 }
 .social__icon {
   height: 25px;
@@ -401,6 +408,7 @@ li {
 @media (min-width: 1280px) {
   .footer {
     justify-content: flex-start;
+    padding-left: 10rem;
   }
   .footer__assoc {
     width: 70%;

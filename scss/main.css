@@ -130,15 +130,26 @@ li {
   }
 }
 @media (min-width: 1280px) {
+  .nav {
+    padding-left: 6rem;
+  }
+  .nav__link {
+    width: 25%;
+  }
+  .nav__links {
+    width: 30%;
+    display: flex;
+    gap: 0.01rem;
+  }
   .hero {
-    height: 98vh;
+    height: 78vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;
     font-weight: 600;
     font-size: 3.8rem;
     line-height: 4.25rem;
-    padding-left: 12rem;
+    padding-left: 8rem;
   }
 }
 .about {
@@ -191,7 +202,7 @@ li {
   font-weight: 500;
   font-size: 1.16rem;
   line-height: 1.2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
 }
 .about__bio__para1 {
   font-family: "Avenir", sans-serif;
@@ -317,6 +328,9 @@ li {
   }
   .about__image {
     aspect-ratio: 16/8;
+  }
+  .about__quote {
+    width: 80%;
   }
   .gallery {
     padding: 0 6rem;

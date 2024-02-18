@@ -109,13 +109,27 @@
 }
 
 @media (min-width: 1280px) {
+
+    .nav {
+        padding-left: 6rem;
+
+        &__link {
+            width: 25%;
+        }
+
+        &__links {
+            width: 30%;
+            display: flex;
+            gap: 0.01rem;
+        } 
+    }
     .hero {
-        height: 98vh;
+        height: 78vh;
 
 
         &__title {
             @include dt-pageHeader;
-            padding-left: 12rem;
+            padding-left: 8rem;
         }
     }
 

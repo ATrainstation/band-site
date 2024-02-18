@@ -23,6 +23,11 @@
 
     &__page {
         @include light-OnDark (#fff);
+        padding: 1rem 0;
+
+        &--inactive {
+            color: $silver;
+        }
     }
 
     &__links {
@@ -32,24 +37,14 @@
         margin: 0;
     }
 
-    &__page {
-        padding: 1rem 0;
-
-        &--inactive {
-            color: $silver;
-        }
-    }
-
     &__link {
         text-decoration: none;
         text-align: center;
-
+        width: 100%;
         &--active {
             border-bottom: 5px solid #FFF;
         }
     }
-
-    
 }
 
 .hero {
@@ -74,7 +69,7 @@
         flex-direction: row;
 
         &__title {
-            padding-top: .8rem;
+            padding-top: 0.8rem;
             padding-left: 3rem;
             justify-content: center;
             align-items: center;
@@ -83,14 +78,14 @@
         &__title img {
             height: 3.5vh;
             width: auto;
+            margin-right: 5rem;
         }
 
         &__links {
             display: flex;
             justify-content: space-evenly;
             width: 30%;
-            margin-left: 6rem;
-        }
+        }        
 
         &__page {
             padding-bottom: 1.5rem;

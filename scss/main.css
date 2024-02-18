@@ -49,6 +49,10 @@ li {
 .nav__page {
   background-color: #323232;
   color: #fff;
+  padding: 1rem 0;
+}
+.nav__page--inactive {
+  color: #AFAFAF;
 }
 .nav__links {
   display: flex;
@@ -56,15 +60,10 @@ li {
   width: 100%;
   margin: 0;
 }
-.nav__page {
-  padding: 1rem 0;
-}
-.nav__page--inactive {
-  color: #AFAFAF;
-}
 .nav__link {
   text-decoration: none;
   text-align: center;
+  width: 100%;
 }
 .nav__link--active {
   border-bottom: 5px solid #FFF;
@@ -100,12 +99,12 @@ li {
   .nav__title img {
     height: 3.5vh;
     width: auto;
+    margin-right: 5rem;
   }
   .nav__links {
     display: flex;
     justify-content: space-evenly;
     width: 30%;
-    margin-left: 6rem;
   }
   .nav__page {
     padding-bottom: 1.5rem;
@@ -147,14 +146,18 @@ li {
   font-size: 1.8rem;
   line-height: 2.75rem;
   padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 .about__container {
   overflow: hidden;
   height: 40%;
 }
 .about__image {
+  aspect-ratio: 16/9;
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about__quote {
   justify-self: center;
@@ -234,6 +237,7 @@ li {
   }
   .about__image {
     padding: 0 4rem;
+    aspect-ratio: 16/7;
   }
   .about__quote {
     padding: 0 4rem;
@@ -271,6 +275,9 @@ li {
     font-weight: 600;
     font-size: 2.6rem;
     line-height: 3.5rem;
+  }
+  .about__image {
+    aspect-ratio: 16/8;
   }
   .gallery {
     padding: 0 6rem;

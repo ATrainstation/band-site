@@ -7,14 +7,12 @@
     &__assoc {
         display: flex;
         flex-direction: column;
-        padding: 0.3rem 0;
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         @include footerCopy;
-        padding: 1rem 0;
         padding-bottom: 2rem;
     }
 
@@ -60,6 +58,7 @@
         justify-content: flex-start;
         gap: 1.9rem;
         padding-top: 0.2rem;
+        padding-bottom: 1rem;
     }
 
     &__icon {

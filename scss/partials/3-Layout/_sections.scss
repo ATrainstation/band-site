@@ -7,7 +7,6 @@
     &__title {
         @include sectionHeader;
         padding-top: 1.5rem;
-        padding-bottom: 1rem;
     }
 
     &__container {
@@ -15,30 +14,42 @@
     height: 40%;
     }
 
+    // Changed aspect ratio to band.jpg to match mockup
     &__image {
-        aspect-ratio: 16 / 9;  
+        aspect-ratio: 16 / 10;  
         width: 100%;  
         height: 100%;  
         object-fit: cover;
+        object-position: bottom;
         padding-bottom: 1rem;
     }
 
 
     &__quote {
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1.12rem;
         line-height: 2rem;
-        padding-bottom: 1.4rem;
+        padding-bottom: 2.25rem;
+    }
+
+    &__quote span {
+        font-style: italic;
+    }    
+    
+    // Adjust kerning between italicised quote and non-italicised W
+    .kerning {
+    padding: 0.2rem;
     }
 
     &__bio {
         width: 100%;
         @include bodyCopy;
+    
     }
 
     &__bio__title {
         @include subHeader;
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
 
     }
 

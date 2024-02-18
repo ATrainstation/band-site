@@ -1,0 +1,33 @@
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes neonColorChange {
+    0% {
+        color: $neonPink;
+    }
+
+    50% {
+        color: $neonBlue;
+    }
+
+    100% {
+        color: $neonPink;
+    }
+}

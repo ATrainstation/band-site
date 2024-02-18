@@ -67,6 +67,7 @@ li {
   padding-top: 16px;
   background-color: #323232;
   color: #fff;
+  height: 80px;
 }
 .nav__title {
   text-align: center;
@@ -88,16 +89,16 @@ li {
   background-color: #323232;
   color: #fff;
   padding: 1rem 0;
-  transition: color 0.35s ease-in-out;
-  transition: font-size 0.2s linear;
+  transition: color 0.35s ease-in-out, font-size 0.4s ease;
 }
 .nav__page--inactive {
   color: #AFAFAF;
 }
 .nav__page:hover {
   animation: neonColorChange 2s infinite;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-top: 3px solid #FFF;
+  padding-top: 0.7rem;
 }
 .nav__links {
   display: flex;
@@ -112,6 +113,10 @@ li {
 }
 .nav__link--active {
   border-bottom: 5px solid #FFF;
+}
+
+.spacer {
+  height: 80px;
 }
 
 .hero {

@@ -1,39 +1,7 @@
 @import "../1-Helpers/_variables.scss";
 @import "../1-Helpers/_mixins.scss";
+@import "../1-Helpers/_functions.scss";
 
-@keyframes wiggle {
-
-    0%,
-    100% {
-        transform: rotate(0);
-    }
-
-    25% {
-        transform: rotate(-5deg);
-    }
-
-    50% {
-        transform: rotate(5deg);
-    }
-
-    75% {
-        transform: rotate(-5deg);
-    }
-}
-
-@keyframes neonColorChange {
-    0% {
-        color: $neonPink;
-    }
-
-    50% {
-        color: $neonBlue;
-    }
-
-    100% {
-        color: $neonPink;
-    }
-}
 
 .nav {
     position: fixed;
@@ -43,6 +11,7 @@
     flex-direction: column;
     padding-top: 16px;
     @include light-OnDark (#fff);
+    height: 80px;
 
     &__title {
         text-align: center;
@@ -66,17 +35,16 @@
     &__page {
         @include light-OnDark (#fff);
         padding: 1rem 0;
-        transition: color 0.35s ease-in-out;
-        transition: font-size 0.2s linear;
-
+        transition: color 0.35s ease-in-out, font-size 0.4s ease;
         &--inactive {
             color: $silver;
         }
 
         &:hover {
             animation: neonColorChange 2s infinite;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             border-top: 3px solid #FFF;
+            padding-top: 0.7rem;
         }
     }
 
@@ -99,6 +67,10 @@
     }
 }
 
+.spacer {
+    height: 80px;
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -107,7 +79,6 @@
         url("../assets/images/hero-bio.jpg");
     background-size: cover;
     margin: 0;
-
 
     &__title {
         @include pageHeader;

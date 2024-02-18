@@ -37,6 +37,11 @@
         padding: 1rem 0;
         @include special-text;
     }
+    
+    &__info a {
+        text-decoration: none;
+        color: $mercury;
+    }
 }
 
 .social {
@@ -124,7 +129,11 @@
 @media (min-width: 1280px) {
     .footer {
         justify-content: flex-start;
-        padding-left: 10rem;
+        padding-left: 10%;
+
+        &__container__logo {
+            padding-left: 5rem;
+        }
 
         &__assoc {
             width: 70%;
@@ -132,6 +141,13 @@
 
         &__copyright {
             width: 100%;
+        }
+    }
+
+    .social {
+
+        &__title {
+            width: 36.5%;
         }
     }
 }

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    @include light-OnDark (#fff);
+    @include light-OnDark ($mercury);
 
     &__assoc {
         display: flex;
@@ -15,12 +15,12 @@
         flex-direction: column;
         @include footerCopy;
         padding: 1rem 0;
+        padding-bottom: 2rem;
     }
 
     &__info__name {
 
         @include footerCopy;
-        font-size: 1rem;
         font-weight: 600;
     }
 
@@ -33,12 +33,12 @@
         min-height: 36px;
         width: auto;
         align-self: center;
-        padding-top: 1rem;
+        padding-top: 0.8rem;
     }
 
     &__copyright {
-        @include footerCopy;
-        padding-top: 1rem;
+        padding: 1rem 0;
+        @include special-text;
     }
 }
 
@@ -48,9 +48,10 @@
     padding: 1rem 0;
 
     &__title {
-        width: 50%;
+        width: 60%;
         padding-bottom: 1.5rem;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-weight: 600;
     }
 
     &__icons {

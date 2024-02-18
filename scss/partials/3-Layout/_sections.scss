@@ -20,11 +20,11 @@
         width: 100%;  
         height: 100%;  
         object-fit: cover;
+        padding-bottom: 1rem;
     }
 
 
     &__quote {
-        justify-self: center;
         font-weight: 600;
         font-size: 1.2rem;
         line-height: 2rem;
@@ -37,8 +37,7 @@
     }
 
     &__bio__title {
-        font-size: 1.3rem;
-        font-weight: 550;
+        @include subHeader;
         padding-bottom: 1rem;
 
     }
@@ -102,6 +101,7 @@
         }
 
         &__quote {
+            padding-top: 2rem;
             padding: 0 4rem;
         }
 

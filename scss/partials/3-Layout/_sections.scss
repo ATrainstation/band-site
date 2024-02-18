@@ -87,7 +87,13 @@
     &__photo img {
         width: 100%;
         height: auto;
-        padding-bottom: 1rem; 
+        padding-bottom: 1rem;         
+        filter: grayscale(100%);
+        transition: filter 0.55s ease;
+    }
+    
+    &__photo:hover img {
+        filter: grayscale(0%);
     }
 }
 

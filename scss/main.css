@@ -123,8 +123,9 @@ li {
   .hero__title {
     font-family: "Avenir", sans-serif;
     font-weight: 600;
-    font-size: 4.75rem;
+    font-size: 3.8rem;
     line-height: 4.25rem;
+    padding-top: 4.5rem;
     padding-left: 2rem;
   }
 }
@@ -135,7 +136,7 @@ li {
   .hero__title {
     font-family: "Avenir", sans-serif;
     font-weight: 600;
-    font-size: 4.75rem;
+    font-size: 3.8rem;
     line-height: 4.25rem;
     padding-left: 12rem;
   }
@@ -172,11 +173,11 @@ li {
   line-height: 2rem;
   padding-bottom: 2.25rem;
 }
-.about__quote span {
+.about__quote--itals {
   font-style: italic;
 }
-.about .kerning {
-  padding: 0.2rem;
+.about__quote--kerning {
+  padding: 0 0.2rem;
 }
 .about__bio {
   width: 100%;
@@ -239,37 +240,60 @@ li {
     padding: 0 3rem;
   }
   .about__title {
-    padding-top: 2.8rem;
     font-family: "Avenir", sans-serif;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     line-height: 2.6rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
   }
-  .about__contatiner {
+  .about__container {
     width: 100%;
     height: auto;
   }
   .about__image {
-    padding: 0 4rem;
+    padding: 0 3rem;
     aspect-ratio: 16/7;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
   .about__quote {
-    padding-top: 2rem;
-    padding: 0 4rem;
+    font-size: 1.3rem;
+    padding: 2rem 3rem;
+  }
+  .about__quote--citation {
+    line-height: 3rem;
+    font-size: 1.1rem;
   }
   .about__bio {
-    padding: 1rem 4rem;
+    padding: 0 3rem;
+  }
+  .about__bio__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.75rem;
   }
   .about__bio__paras {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.7rem;
     padding-bottom: 1rem;
+  }
+  .about__bio__paras p {
     font-family: "Avenir", sans-serif;
     font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: 0.855rem;
+    line-height: 1.5rem;
   }
   .gallery__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
     padding-left: 1.65rem;
   }
   .gallery__photos {
@@ -288,7 +312,7 @@ li {
     padding: 0 12rem;
     font-family: "Avenir", sans-serif;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     line-height: 2.6rem;
   }
   .about__image {

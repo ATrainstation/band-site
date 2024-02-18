@@ -101,6 +101,7 @@
 
         &__title {
             @include dt-pageHeader;
+            padding-top: 4.5rem;
             padding-left: 2rem;
         }
     }

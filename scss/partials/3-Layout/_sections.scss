@@ -30,15 +30,15 @@
         font-size: 1.12rem;
         line-height: 2rem;
         padding-bottom: 2.25rem;
-    }
-
-    &__quote span {
-        font-style: italic;
-    }    
+    
+        &--itals {
+            font-style: italic;
+        }    
     
     // Adjust kerning between italicised quote and non-italicised W
-    .kerning {
-    padding: 0.2rem;
+        &--kerning {
+            padding: 0 0.2rem;
+        }
     }
 
     &__bio {
@@ -50,7 +50,6 @@
     &__bio__title {
         @include subHeader;
         padding-bottom: 1.5rem;
-
     }
 
     &__bio__para1 {
@@ -97,40 +96,58 @@
         padding: 0 3rem;
 
         &__title {
-            padding-top: 2.8rem;
             @include dt-sectionHeader;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
         }
 
-        &__contatiner {
+        &__container {
             width: 100%;
             height: auto;
         }
     
         &__image {
-            padding: 0 4rem;
+            padding: 0 3rem;
             aspect-ratio: 16 / 7; 
+            object-fit: cover;
+            object-position: center;
         }
 
         &__quote {
-            padding-top: 2rem;
-            padding: 0 4rem;
+            font-size: 1.3rem;
+            padding: 2rem 3rem;
+
+        &--citation {
+            line-height: 3rem;
+            font-size: 1.1rem;
+        }
         }
 
         &__bio {
-            padding: 1rem 4rem;
+            padding: 0 3rem;
+        }
+
+        &__bio__title {
+            @include dt-subHeader;
         }
 
         &__bio__paras {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.7rem;
             padding-bottom: 1rem;
+    
+        & p {
             @include dt-bodyCopy;
+        }
         }
     }
 
     .gallery {
 
         &__title {
+            @include dt-sectionHeader;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
             padding-left: 1.65rem;
         }
 

@@ -4,6 +4,16 @@
     padding: 1rem;
     @include light-OnDark ($mercury);
 
+    & a {
+        color: $mercury;
+        text-decoration: none;
+        transition: color 0.35s ease-in-out;
+
+    &:hover {
+        animation: neonColorChange 2s infinite;
+    }
+}
+
     &__assoc {
         display: flex;
         flex-direction: column;
@@ -31,16 +41,17 @@
         width: auto;
         align-self: center;
         padding-top: 0.8rem;
+        transition: transform 1s ease-in-out;
+
+        &:hover {
+            animation: wiggle 1s ease-in-out infinite;
+            background-color:  #32323200; 
+        }
     }
 
     &__copyright {
         padding: 1rem 0;
         @include special-text;
-    }
-    
-    &__info a {
-        text-decoration: none;
-        color: $mercury;
     }
 }
 

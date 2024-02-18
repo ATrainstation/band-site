@@ -1,8 +1,43 @@
 @import "../1-Helpers/_variables.scss";
 @import "../1-Helpers/_mixins.scss";
 
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes neonColorChange {
+    0% {
+        color: $neonPink;
+    }
+
+    50% {
+        color: $neonBlue;
+    }
+
+    100% {
+        color: $neonPink;
+    }
+}
 
 .nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-top: 16px;
@@ -11,6 +46,12 @@
     &__title {
         text-align: center;
         @include light-OnDark (#fff);
+        transition: transform 1s ease-in-out;
+
+        &:hover {
+            animation: wiggle 1s ease-in-out infinite;
+            background-color: #32323200;
+        }
     }
 
     // Logo max sizes according to style guide
@@ -24,9 +65,17 @@
     &__page {
         @include light-OnDark (#fff);
         padding: 1rem 0;
+        transition: color 0.35s ease-in-out;
+        transition: font-size 0.2s linear;
 
         &--inactive {
             color: $silver;
+        }
+
+        &:hover {
+            animation: neonColorChange 2s infinite;
+            font-size: 1.2rem;
+            border-top: 3px solid #FFF;
         }
     }
 
@@ -41,6 +90,8 @@
         text-decoration: none;
         text-align: center;
         width: 100%;
+        
+
         &--active {
             border-bottom: 5px solid #FFF;
         }
@@ -51,7 +102,7 @@
     display: flex;
     align-items: center;
     height: 24vh;
-     background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), 
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
         url("../assets/images/hero-bio.jpg");
     background-size: cover;
     margin: 0;
@@ -85,14 +136,14 @@
             display: flex;
             justify-content: space-evenly;
             width: 30%;
-        }        
+        }
 
         &__page {
             padding-bottom: 1.5rem;
         }
 
         &__link--active {
-            max-width: 87px;
+            max-width: 100px;
         }
     }
 
@@ -121,8 +172,9 @@
             width: 30%;
             display: flex;
             gap: 0.01rem;
-        } 
+        }
     }
+
     .hero {
         height: 78vh;
 

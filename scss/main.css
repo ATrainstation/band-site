@@ -204,7 +204,7 @@ li {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 58vh;
+    height: 68vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;

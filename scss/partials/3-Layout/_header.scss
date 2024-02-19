@@ -35,6 +35,12 @@
         @include light-OnDark (#fff);
         padding: 1rem 0;
         transition: color 0.35s ease-in-out, font-size 0.4s ease;
+        
+        &--active {
+            border-bottom: 5px solid #FFF;
+            padding-bottom: 0.5rem;
+        }
+
         &--inactive {
             color: $silver;
         }
@@ -42,14 +48,13 @@
         &:hover {
             animation: neonColorChange 2s infinite;
             font-size: 1.3rem;
-            border-top: 3px solid #FFF;
+            border-top: 2px solid #FFF;
             padding-top: 0.7rem;
         }
     }
 
     &__links {
         display: flex;
-        justify-content: space-evenly;
         width: 100%;
         margin: 0;
     }
@@ -59,9 +64,7 @@
         text-align: center;
         width: 100%;
 
-        &--active {
-            border-bottom: 5px solid #FFF;
-        }
+        
 
         @media (min-width: 768px) {
             width: 25%;
@@ -90,8 +93,8 @@
 
         &__links {
             display: flex;
-            justify-content: space-evenly;
-            width: 30%;
+            gap: 1rem;
+            width: 50%;
         }
 
         &__page {
@@ -115,7 +118,7 @@
 .hero {
     display: flex;
     align-items: center;
-    height: 24vh;
+    height: 32vh;
     background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
         url("../assets/images/hero-bio.jpg");
     background-size: cover;

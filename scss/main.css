@@ -114,28 +114,16 @@ li {
 .nav__link--active {
   border-bottom: 5px solid #FFF;
 }
-
-.spacer {
-  height: 80px;
+@media (min-width: 768px) {
+  .nav__link {
+    width: 25%;
+  }
 }
-
-.hero {
-  display: flex;
-  align-items: center;
-  height: 24vh;
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
-  background-size: cover;
-  margin: 0;
+@media (min-width: 1280px) {
+  .nav__link {
+    width: 20%;
+  }
 }
-.hero__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
-  font-size: 1.75rem;
-  line-height: 2.75rem;
-  color: #FFF;
-  padding-left: 1rem;
-}
-
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
@@ -162,6 +150,34 @@ li {
   .nav__link--active {
     max-width: 100px;
   }
+}
+@media (min-width: 1280px) {
+  .nav {
+    padding-left: 4.5rem;
+  }
+}
+
+.spacer {
+  height: 80px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 24vh;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  margin: 0;
+}
+.hero__title {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 2.75rem;
+  color: #FFF;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
   .hero {
     height: 58vh;
   }
@@ -175,19 +191,8 @@ li {
   }
 }
 @media (min-width: 1280px) {
-  .nav {
-    padding-left: 6rem;
-  }
-  .nav__link {
-    width: 25%;
-  }
-  .nav__links {
-    width: 30%;
-    display: flex;
-    gap: 0.01rem;
-  }
   .hero {
-    height: 78vh;
+    height: 98vh;
   }
   .hero__title {
     font-family: "Avenir", sans-serif;
@@ -197,6 +202,7 @@ li {
     padding-left: 8rem;
   }
 }
+
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -263,39 +269,6 @@ li {
   line-height: 1.6rem;
   padding-bottom: 1rem;
 }
-
-.gallery {
-  padding: 0 1rem;
-  background-color: #FAFAFA;
-  justify-content: center;
-}
-.gallery__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 2.75rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-}
-.gallery_photos {
-  display: flex;
-  flex-wrap: wrap;
-}
-.gallery__photo {
-  display: flex;
-  width: 100%;
-}
-.gallery__photo img {
-  width: 100%;
-  height: auto;
-  padding-bottom: 1rem;
-  filter: grayscale(100%);
-  transition: filter 0.55s ease;
-}
-.gallery__photo:hover img {
-  filter: grayscale(0%);
-}
-
 @media (min-width: 768px) {
   .about {
     padding: 0 3rem;
@@ -348,25 +321,6 @@ li {
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
-  .gallery__title {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
-    padding-top: 3rem;
-    padding-bottom: 1.5rem;
-    padding-left: 1.65rem;
-  }
-  .gallery__photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
-  }
-  .gallery__photo {
-    width: 30%;
-  }
 }
 @media (min-width: 1280px) {
   .about {
@@ -390,15 +344,68 @@ li {
   .about__bio {
     padding: 0 6rem;
   }
-  .gallery {
-    padding: 0 6rem;
+}
+
+.gallery {
+  padding: 0 1rem;
+  background-color: #FAFAFA;
+  justify-content: center;
+}
+.gallery__title {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.gallery_photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery__photo {
+  display: flex;
+  width: 100%;
+}
+.gallery__photo img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.55s ease;
+}
+.gallery__photo:hover img {
+  filter: grayscale(0%);
+}
+@media (min-width: 768px) {
+  .gallery__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3.55vw;
   }
+  .gallery__photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  .gallery__photo {
+    width: 30%;
+  }
+}
+@media (min-width: 1280px) {
   .gallery__title {
     padding-top: 3rem;
     padding-bottom: 2rem;
-    padding-left: 2.5rem;
+    padding-left: 3.55vw;
   }
 }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -456,48 +463,7 @@ li {
   font-size: 0.86rem;
   line-height: 1rem;
 }
-
-.social {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-}
-.social__title {
-  width: 60%;
-  padding-bottom: 1.5rem;
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 2.6rem;
-}
-.social__icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1.9rem;
-  padding-top: 0.2rem;
-  padding-bottom: 1rem;
-}
-.social__icon {
-  height: 25px;
-  width: auto;
-}
-
 @media (min-width: 768px) {
-  .social {
-    width: 70%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    order: -2;
-  }
-  .social__title {
-    width: 50%;
-  }
-  .social__icons {
-    width: 50%;
-    flex-direction: row;
-    padding-bottom: 1rem;
-  }
   .footer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -548,10 +514,10 @@ li {
 @media (min-width: 1280px) {
   .footer {
     justify-content: flex-start;
-    padding-left: 10%;
+    padding-left: 5%;
   }
   .footer__container__logo {
-    padding-left: 5rem;
+    padding-left: 16%;
   }
   .footer__assoc {
     width: 70%;
@@ -559,6 +525,50 @@ li {
   .footer__copyright {
     width: 100%;
   }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.social__title {
+  width: 60%;
+  padding-bottom: 1.5rem;
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+}
+.social__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.9rem;
+  padding-top: 0.2rem;
+  padding-bottom: 1rem;
+}
+.social__icon {
+  height: 25px;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .social {
+    width: 70%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    order: -2;
+  }
+  .social__title {
+    width: 50%;
+  }
+  .social__icons {
+    width: 50%;
+    flex-direction: row;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1280px) {
   .social__title {
     width: 36.5%;
   }

@@ -2,7 +2,6 @@
 @import "../1-Helpers/_mixins.scss";
 @import "../1-Helpers/_functions.scss";
 
-
 .nav {
     position: fixed;
     z-index: 100;
@@ -59,36 +58,21 @@
         text-decoration: none;
         text-align: center;
         width: 100%;
-        
 
         &--active {
             border-bottom: 5px solid #FFF;
         }
+
+        @media (min-width: 768px) {
+            width: 25%;
+        }
+
+        @media (min-width: 1280px) {
+            width: 20%;
+        }
     }
-}
 
-.spacer {
-    height: 80px;
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-    height: 24vh;
-    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
-        url("../assets/images/hero-bio.jpg");
-    background-size: cover;
-    margin: 0;
-
-    &__title {
-        @include pageHeader;
-        color: $white;
-        padding-left: 1rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .nav {
+    @media (min-width: 768px) {
         flex-direction: row;
 
         &__title {
@@ -119,7 +103,31 @@
         }
     }
 
-    .hero {
+    @media (min-width: 1280px) {
+        padding-left: 4.5rem;
+    }
+}
+
+.spacer {
+    height: 80px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 24vh;
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+        url("../assets/images/hero-bio.jpg");
+    background-size: cover;
+    margin: 0;
+
+    &__title {
+        @include pageHeader;
+        color: $white;
+        padding-left: 1rem;
+    }
+
+    @media (min-width: 768px) {
         height: 58vh;
 
         &__title {
@@ -129,32 +137,12 @@
         }
     }
 
-}
-
-@media (min-width: 1280px) {
-
-    .nav {
-        padding-left: 6rem;
-
-        &__link {
-            width: 25%;
-        }
-
-        &__links {
-            width: 30%;
-            display: flex;
-            gap: 0.01rem;
-        }
-    }
-
-    .hero {
-        height: 78vh;
-
+    @media (min-width: 1280px) {
+        height: 98vh;
 
         &__title {
             @include dt-pageHeader;
             padding-left: 8rem;
         }
     }
-
 }

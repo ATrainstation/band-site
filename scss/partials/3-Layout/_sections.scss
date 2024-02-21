@@ -195,3 +195,108 @@
         }
     }
 }
+
+
+.form {
+
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    & label {
+        @include special-text;
+        width: 100%;
+        color: $silver;
+
+    }
+
+    & input::placeholder {
+        color: $black;
+
+
+    }
+
+    &__name {
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+        min-height: 36px;
+        width: 100%;
+        margin-bottom: 1rem;
+    } 
+
+    &__field {
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+ 
+        width: 100%;
+        height: 15vh;
+        min-height: 36px;
+        margin-top: 4px;
+        margin-bottom: 1rem;
+    }
+
+    &__submit {
+        @include special-text;
+        height: 40px;
+        border-radius: 4px;
+        background-color: $black;
+        color: $alabaster;
+        width: 100%;
+    }
+}
+
+.comments {
+
+    padding-top: 2vh;
+    
+    &__header {
+        @include sectionHeader;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+    
+    &__new-post {
+        display: flex;
+    }
+
+
+    &__pfp {
+        background-color: $mercury;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin: 1rem 1rem;
+    }
+    
+    &__text {
+        width: 80%;
+    }
+
+    &__post {
+        display: flex;
+
+        &__top {
+            display: flex;
+            padding-bottom: 1rem;
+            justify-content: space-between;
+        }
+        
+    }
+
+    @media (min-width: 768px) {
+
+        &__pfp {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+    

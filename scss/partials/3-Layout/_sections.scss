@@ -149,6 +149,7 @@
         flex-wrap: wrap;
     }
 
+
     &__photo {
         display: flex;
         width: 100%;
@@ -239,10 +240,7 @@
 
     &__submit {
         @include special-text;
-        height: 40px;
-        border-radius: 4px;
-        background-color: $black;
-        color: $alabaster;
+        @include button($black);
         width: 100%;
     }
 }

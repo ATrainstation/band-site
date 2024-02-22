@@ -7,8 +7,17 @@ li {
     list-style: none;
 }
 
+.spacer {
+  height: 80px;
+}
+
+
 .divider {
-height: 1px;
+  height: 1px;
   background-color: $mercury;
   margin: 1rem 1rem;
+
+  &--full {
+    margin: 1rem 0;
+  }
 }

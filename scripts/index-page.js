@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
 
 const posts = [
   {
@@ -28,6 +27,7 @@ const posts = [
 openPosts();
 
 const form = document.getElementById('comments-form')
+
 form.addEventListener("submit", function (post) {
   post.preventDefault();
 
@@ -43,7 +43,7 @@ form.addEventListener("submit", function (post) {
     year: 'numeric'
 });
 
-// turn variables to objects
+// Define object name variable pair, store variables in object
   const newPost = {
     username,
     review,
@@ -54,40 +54,62 @@ form.addEventListener("submit", function (post) {
 // VALIDATION SECTION
 
 
-if (username.length > 31) {
-    alert("Sorry, your username needs to be shorter than 30 letters, please use a short form or nickname.");
+// if (username.length > 31) {
+//     alert("Sorry, your username needs to be shorter than 30 letters, please use a short form or nickname.");
+//     return;
+// }
+
+//   if (review.length < 5) {
+//     alert("Your comment is too short, you've gotta have more to say...");
+//     return;
+// }
+
+const userNameField = document.getElementById('username');
+const reviewField = document.getElementById('review');
+
+if (username.length === 0 || review.length === 0) {
+
+    if (username.length === 0 && review.length === 0) {
+    userNameField.classList.add('form__field--error');
+    userNameField.removeAttribute('placeholder');
+    reviewField.classList.add('form__field--error');
+    reviewField.removeAttribute('placeholder');
     return;
-}
-
-  if (review.length < 5) {
-    alert("Your comment is too short, you've gotta have more to say...");
+    
+  } else if (username.length === 0) {
+    userNameField.classList.add('form__field--error');
+    userNameField.removeAttribute('placeholder');
     return;
-}
-
-
-
+  }
+  else if (review.length === 0) {
+   reviewField.classList.add('form__field--error');
+    reviewField.removeAttribute('placeholder');
+    return;
+  }
+  else {
+    userNameField.classList.remove('form__field--error');
+    reviewField.classList.remove('form__field--error');
+  }
+  };
 
 // Add the submitted post to the array
-
-
 posts.unshift(newPost);
 
+
 clearPosts();
+
 // Add the submitted post to the previously posted
 openPosts();
 
 // Reset placeholders in form fields
 post.target.reset();
 
-
-});
-
 function clearPosts() {
   const posted = document.getElementById('comments__posted');
   while (posted.firstChild) {
       posted.removeChild(posted.firstChild);
-  }
-}
+  
+}};
 
 
 function openPosts() {
@@ -143,6 +165,7 @@ const divider = document.createElement('div');
 divider.className = 'divider';
 posted.appendChild(divider);
 
+})};
+
 });
-}
-});
+

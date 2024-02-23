@@ -109,7 +109,8 @@ function clearPosts() {
   while (posted.firstChild) {
       posted.removeChild(posted.firstChild);
   
-}}});
+}};
+});
 
 
 function openPosts() {
@@ -166,6 +167,3 @@ divider.className = 'divider';
 posted.appendChild(divider);
 
 })};
-
-})};
-

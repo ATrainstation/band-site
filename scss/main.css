@@ -245,6 +245,80 @@ li {
   }
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  height: 32vh;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  margin: 0;
+}
+.hero__title {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 2.75rem;
+  color: #FFF;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 68vh;
+  }
+  .hero__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4.25rem;
+    padding-top: 4.5rem;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 98vh;
+  }
+  .hero__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4.25rem;
+    padding-left: 8rem;
+  }
+}
+.hero--shows {
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../assets/images/hero-shows.jpg");
+  background-size: cover;
+  margin: 0;
+}
+.hero--shows__title {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 2.75rem;
+  color: #FFF;
+  padding-left: 1rem;
+  width: 70%;
+}
+.hero--shows__title__album {
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;
+  font-size: 1.16rem;
+  line-height: 1.2rem;
+  color: #FFF;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+.hero--shows__iframe {
+  width: 100%;
+}
+.hero iframe {
+  width: 100%;
+  padding: 0 1rem;
+  padding-bottom: 5vh;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -653,6 +727,9 @@ li {
   margin-top: 4px;
   margin-bottom: 1rem;
 }
+.form__field--error {
+  border-color: red;
+}
 .form__submit {
   font-family: "Avenir", sans-serif;
   font-weight: 400;
@@ -706,86 +783,10 @@ li {
   }
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  height: 32vh;
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
-  background-size: cover;
-  margin: 0;
-}
-.hero__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
-  font-size: 1.75rem;
-  line-height: 2.75rem;
-  color: #FFF;
-  padding-left: 1rem;
-}
-@media (min-width: 768px) {
-  .hero {
-    height: 68vh;
-  }
-  .hero__title {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
-    font-size: 3.8rem;
-    line-height: 4.25rem;
-    padding-top: 4.5rem;
-    padding-left: 2rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero {
-    height: 98vh;
-  }
-  .hero__title {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
-    font-size: 3.8rem;
-    line-height: 4.25rem;
-    padding-left: 8rem;
-  }
-}
-.hero--shows {
-  display: flex;
-  flex-wrap: wrap;
-  height: 70vh;
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-shows.jpg");
-  background-size: cover;
-  margin: 0;
-}
-.hero--shows__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
-  font-size: 1.75rem;
-  line-height: 2.75rem;
-  color: #FFF;
-  padding-left: 1rem;
-  width: 70%;
-}
-.hero--shows__title__album {
-  font-family: "Avenir", sans-serif;
-  font-weight: 500;
-  font-size: 1.16rem;
-  line-height: 1.2rem;
-  color: #FFF;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-}
-.hero--shows__iframe {
-  width: 100%;
-}
-.hero iframe {
-  width: 100%;
-  padding: 0 1rem;
-  padding-bottom: 5vh;
-}
-.hero .shows {
+.shows {
   margin-top: 1rem;
 }
-.hero .shows__title {
+.shows__title {
   font-family: "Avenir", sans-serif;
   font-weight: 600;
   font-size: 1.75rem;
@@ -793,17 +794,17 @@ li {
   padding: 0 1rem;
   padding-bottom: 1rem;
 }
-.hero .shows__gig__header {
+.shows__gig__header {
   color: #AFAFAF;
   font-weight: 500;
   font-size: 0.7rem;
 }
-.hero .shows__gig__pad {
+.shows__gig__pad {
   margin-left: 1rem;
   margin-right: 1rem;
   padding-bottom: 1rem;
 }
-.hero .shows__gig__button {
+.shows__gig__button {
   background-color: #323232;
   color: #FFF;
   height: 40px;

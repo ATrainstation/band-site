@@ -1,0 +1,71 @@
+.hero {
+    display: flex;
+    align-items: center;
+    height: 32vh;
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+        url("../assets/images/hero-bio.jpg");
+    background-size: cover;
+    margin: 0;
+
+    &__title {
+        @include pageHeader;
+        color: $white;
+        padding-left: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        height: 68vh;
+
+        &__title {
+            @include dt-pageHeader;
+            padding-top: 4.5rem;
+            padding-left: 2rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        height: 98vh;
+
+        &__title {
+            @include dt-pageHeader;
+            padding-left: 8rem;
+        }
+    }
+
+  // Modifier for Hero section on homepage
+ &--shows {
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+        url("../../assets/images/hero-shows.jpg");
+    background-size: cover;
+    margin: 0;
+
+    &__title {
+        @include pageHeader;
+        color: $white;
+        padding-left: 1rem;
+        width: 70%;
+
+        &__album {
+            @include subHeader;
+            color: #FFF;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    &__iframe {
+        width: 100%;
+    }
+} 
+
+iframe {
+    width: 100%;
+    padding: 0 1rem;
+    padding-bottom: 5vh;
+}
+}
+
+
+
+    

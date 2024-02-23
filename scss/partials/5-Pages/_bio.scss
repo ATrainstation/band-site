@@ -1,3 +1,4 @@
+
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -213,8 +214,6 @@
 
     & input::placeholder {
         color: $black;
-
-
     }
 
     &__name {
@@ -236,7 +235,12 @@
         min-height: 36px;
         margin-top: 4px;
         margin-bottom: 1rem;
+
+        &--error {
+            border-color: red;
+        }
     }
+    
 
     &__submit {
         @include special-text;

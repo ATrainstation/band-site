@@ -1,110 +1,120 @@
-const posts = [
+const shows = [
     {
-        username: "Isaac Tadesse",
-        date: "10/20/2023",
-        comment: "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
-        pfp: "",
-      },
-      
-      {
-        username: "Christina Cabrera",
-        date: "10/28/2023",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        pfp: "",
-      },
+        date: "Mon Sept 09 2024",
+        venue: "Ronald Lane",
+        location: "San Francisco, CA"
+    },
 
-      {
-        username: "Victor Pinto",
-        date: "11/02/2023",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-        pfp: "",
-      },
+    {
+        date: "Tue Sept 17 2024",
+        venue: "Pier 3 East",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Sat Oct 12 2024",
+        venue: "View Lounge",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Sat Nov 16 2024",
+        venue: "Hyatt Agency",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Fri Nov 29 2024",
+        venue: "Moscow Center",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Wed Dec 18 2024",
+        venue: "Press Club",
+        location: "San Francisco, CA"
+    },
 ];
 
-renderSubmissions(posts);
+    clearShows();
+    openShows();
 
-const form = document.getElementById("comments-form");
+function clearShows() {
+    const gigsListed = document.querySelector('.shows__gigs');
+    while (gigsListed.firstChild) {
+        gigsListed.removeChild(gigsListed.firstChild);
+    }
+  };
 
-form.addEventListener("submit", handleSubmit);
+ function openShows() {
+    const gigsListed = document.querySelector('.shows__gigs');
 
-function handleSubmit(post) {
-  post.preventDefault();
+    shows.forEach(function (gig) {
+    const gigContainer = document.createElement('div');
+    gigContainer.className = 'shows__gig';
 
-  const username = post.target.username.value;
-  const date = post.target.date.value;
-  const comment = post.target.comment.value;
-  const pfp = post.target.pfp.value;
+    // DATE
+    const dateContainer = document.createElement('div');
+    dateContainer.className = 'shows__gig__cont';
 
+    const dateHeader = document.createElement('h4');
+    dateHeader.className = 'shows__gig__header'
 
-  const newPost = {
-    username,
-    date,
-    comment,
-    pfp,
+    const dateValue = document.createElement('p');
+    dateValue.className = 'shows__gig__date';
+
+    // VENUE
+
+    const venueContainer = document.createElement('div');
+    venueContainer.className = 'shows__gig__cont';
+
+    const venueHeader = document.createElement('h4');
+    venueHeader.className = 'shows__gig__header'
+
+    const venueValue = document.createElement('p');
+    venueValue.className = 'shows__gig__venue';
+
+    // LOCATION
+
+    const locaContainer = document.createElement('div');
+    locaContainer.className = 'shows__gig__cont';
+
+    const locaHeader = document.createElement('h4');
+    locaHeader.className = 'shows__gig__header'
+
+    const locaValue = document.createElement('p');
+    locaValue.className = 'shows__gig__location';
+
+    // Buttons and Dividers
+    const buyButton = document.createElement('button');
+    buyButton.className = "shows__gig__button shows__gig__pad";
+
+    const divider = document.createElement('div');
+    divider.className = "divider divider--full";
+
+    gigsListed.appendChild(gigContainer);
+    gigContainer.appendChild(dateContainer);
+    dateContainer.appendChild(dateHeader);
+    dateContainer.appendChild(dateValue);
+    dateValue.textContent = gig.date;
+
+    gigContainer.appendChild(venueContainer);
+    venueContainer.appendChild(venueHeader);
+    venueContainer.appendChild(venueValue);
+    venueValue.textContent = gig.venue;
+
+    gigContainer.appendChild(locaContainer);
+    locaContainer.appendChild(locaHeader);
+    locaContainer.appendChild(locaValue);
+    locaValue.textContent = gig.location;
+
+    gigContainer.appendChild(buyButton);
+    gigContainer.appendChild(divider);
+
+})
 };
 
-if (username.length < 31) {
-    alert("Sorry, your username needs to be shorter than 30 letters, please use a short form or nickname.");
-    return;
-}
-
-if (comment.length < 5) {
-    alert("Your comment is too short, you've gotta have more to say...");
-    return;
-}
-
-submissions.push(newPost);
-
-renderSubmissions(posts);
-
-post.target.reset();
-}
-
-function renderSubmissions(posts) {
-
-    posts.forEach(() => {
-const article = document.createElement('article');
-article.className = 'comments__post';
-
-const pfpDiv = document.createElement('div');
-pfpDiv.className = 'comments__post__pfp';
-
-const pfpImg = document.createElement('img');
-pfpImg.className = 'comments__pfp';
-pfpImg.src = posts.pfp; // Set the source to the actual value from the form
-
-pfpDiv.appendChild(pfpImg);
-article.appendChild(pfpDiv);
-
-const textDiv = document.createElement('div');
-textDiv.className = 'comments__text';
-
-const topDiv = document.createElement('div');
-topDiv.className = 'comments__post__top';
-
-const nameHeading = document.createElement('h3');
-nameHeading.className = 'comments__post__name';
-nameHeading.textContent = posts.username; // Set the text content to the actual value from the form
-
-const datePara = document.createElement('p');
-datePara.className = 'comments__post__date';
-datePara.textContent = posts.date; // Set the text content to the actual value from the form
-
-topDiv.appendChild(nameHeading);
-topDiv.appendChild(datePara);
-
-const commentDiv = document.createElement('div');
-
-const commentPara = document.createElement('p');
-commentPara.className = 'comments__post__comment';
-commentPara.textContent = posts.comment; // Set the text content to the actual value from the form
-
-commentDiv.appendChild(commentPara);
-
-textDiv.appendChild(topDiv);
-textDiv.appendChild(commentDiv);
-
-article.appendChild(textDiv);
-
-commentsContainer.appendChild(article);
-})};
+document.addEventListener('DOMContentLoaded', function () {
+    clearShows();
+    openShows();
+});

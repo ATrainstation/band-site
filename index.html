@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/font/AvenirNextLTPro-Regular.otf">
     <link rel="stylesheet" href="assets/font/AvenirNextLTPro-demi.otf">
     <link rel="stylesheet" href="assets/font/AvenirNextLTPro-bold.otf">
-    <script src="scripts/build-shows-page.js" deferred></script>
+    
     <title>The Bees Knees: Biography</title>
 
 </head>
@@ -123,16 +123,16 @@
             </div>
 
             <div class="form">
-                <form action="/submit_form" method="post" id="comments-form">
+                <form method="post" id="comments-form">
                     
                     <div>
                         <label for="username">NAME</label>
-                        <input class="form__name" type="text" id="username" name="username" placeholder="Enter your name">
+                        <input class="form__name" type="text" id="username" name="username" placeholder="Enter your name" required>
                     </div>
     
                     <div>
-                        <label for="comment">COMMENT</label>
-                        <input class="form__field" id="comment" name="comment" placeholder="Add a new comment">
+                        <label for="review">COMMENT</label>
+                        <input class="form__field" id="review" name="comment" placeholder="Add a new comment" required>
                     </div>
 
                     <button class="form__submit" type="submit">COMMENT</button>
@@ -141,73 +141,13 @@
         </article>
 
         <div class="divider"></div>
-
-        <article class="comments__post">
-            <div class="comments__post__pfp">
-                <img class="comments__pfp" src=""/>
-            </div>
-            <div class="comments__text">
-            <div class="comments__post__top">
-                <h3 class="comments__post__name" id="username"></h3>
-                <p class="comments__post__date" id="date"></p>
-            </div>
-            <div>
-                <p class="comments__post__comment" id="comment">
-                     
-                </p>
-            </div>
-        </div>
-        </article>
-
-        <div class="divider"></div>
-
-        <article class="comments__post">
-            <div class="comments__post__pfp">
-                <img class="comments__pfp" src=""/>
-            </div>
-            <div class="comments__text">
-            <div class="comments__post__top">
-                <h3 class="comments__post__name">Christina Cabrera</h3>
-                <p class="comments__post__date">10/28/2023</p>
-            </div>
-            <div>
-                <p class="comments__post__comment">
-                    I feel blessed to have seen them in 
-                    person. What a show! They were just 
-                    perfection. If there was one day of my 
-                    life I could relive, this would be it. What 
-                    an incredible day.
-                </p>
-            </div>
-        </div>
-        </article>
-
-        <div class="divider"></div>
-
-        <article class="comments__post">
-            <div class="comments__post__pfp">
-                <img class="comments__pfp" src=""/>
-            </div>
-            <div class="comments__text">
-            <div class="comments__post__top">
-                <h3 class="comments__post__name">Isaac Tadesse</h3>
-                <p class="comments__post__date">10/20/2023</p>
-            </div>
-            <div>
-                <p class="comments__post__comment">
-                    I can't stop listening. Every time I hear 
-                    one of their songs the vocals it gives 
-                    me goosebumps. Shivers straight down 
-                    my spine. What a beautiful expression of 
-                    creativity. Can t get enough.
-                </p>
-            </div>
-        </div>
-        </article>
-
-        <div class="divider"></div>
+        <section id="comments__posted">
+        
+    
+            <div class="divider"></div>
+        </section>
     </section>
-
+    <script src="scripts/index-page.js"></script>
     <footer class="footer">
         <article class="social">
             <h2 class="social__title">
@@ -269,6 +209,7 @@
         </div>
     </footer>
 
+    
 </body>
 
 

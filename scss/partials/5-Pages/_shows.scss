@@ -1,0 +1,31 @@
+
+.shows {
+    margin-top: 1rem;
+    
+    &__title {
+        @include pageHeader;
+        padding: 0 1rem;
+        padding-bottom: 1rem;
+        
+    }
+
+    &__gig {
+
+        &__header {
+            color: $silver;
+            font-weight: 500;
+            font-size: 0.7rem;
+        }
+
+        &__pad {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &__button {
+            @include button($black);
+        }
+    }
+
+}

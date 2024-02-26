@@ -15,7 +15,7 @@ li {
 .divider {
   height: 2px;
   background-color: $mercury;
-  margin: $spacer;
+  @include vertMarg($spacer);
 
   &--full {
     margin: $largeSpace 0;

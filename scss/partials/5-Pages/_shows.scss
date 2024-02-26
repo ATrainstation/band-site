@@ -1,4 +1,8 @@
 
+.dt-shows__headers {
+    display: none;
+}
+
 .shows {
     
     margin-top: 1rem;
@@ -30,7 +34,7 @@
         }
 
         &__venue, &__location {
-            @include bodyCopy;
+            @include dt-bodyCopy;
             color: $darkblk;
             font-weight: 500;
            } 
@@ -47,4 +51,85 @@
         }
     }
 
+    @media (min-width: 768px) {
+    &__title {
+        @include dt-sectionHeader;
+        @include dt-headSpace;
+        @include horiMarg($largeSpace);
+        color: black;
+    }
+
+    &__gig {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &__cont {
+            
+            @include vertSpace($smallSpace);
+            @include horiMarg($largeSpace);
+            width: 15%;
+
+
+            &--med {
+                width: 20%;
+            }
+
+            &--big {
+                width: 22%;
+            }
+        }
+            &__header {
+                @include special-text(0.8rem);
+                color: $silver;
+                padding-bottom: 0;
+                display: none;
+            }
+    
+               &__button__cont {
+                display: flex;
+                width: auto;
+               }
+    
+            &__button {
+                @include button($black);
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .divider {
+        width: 100%;
+    }
+
+    .dt-shows__headers {
+        display: flex;
+        flex-direction: row;
+        @include special-text();
+        color: silver;
+        font-weight: 400; 
+        @include vertMarg($spacer);
+        @include horiMarg($largeSpace);
+        
+
+        &--date {
+           width: 26%;
+        }
+
+        &--venue {
+            width: 26%;
+         }
+
+         &--loca {
+            width: 25%;
+         }
+
+        //  &__butt {
+        //     width: auto;
+        //  }
+    }
+    
 }

@@ -48,6 +48,7 @@ function clearShows() {
 
  function openShows() {
     const gigsListed = document.querySelector('.shows__gigs');
+    const showsHeaders = document.querySelector('.dt-shows__headers');
 
     shows.forEach(function (gig) {
     const gigContainer = document.createElement('div');
@@ -55,7 +56,7 @@ function clearShows() {
 
     // DATE
     const dateContainer = document.createElement('div');
-    dateContainer.className = 'shows__gig__cont';
+    dateContainer.className = 'shows__gig__cont shows__gig__cont--big';
 
     const dateHeader = document.createElement('h4');
     dateHeader.className = 'shows__gig__header'
@@ -77,7 +78,7 @@ function clearShows() {
     // LOCATION
 
     const locaContainer = document.createElement('div');
-    locaContainer.className = 'shows__gig__cont';
+    locaContainer.className = 'shows__gig__cont shows__gig__cont--big';
 
     const locaHeader = document.createElement('h4');
     locaHeader.className = 'shows__gig__header'

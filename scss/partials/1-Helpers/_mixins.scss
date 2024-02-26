@@ -107,6 +107,7 @@
 
 @mixin dt-special-text {
     @include regular;
+    color: $silver;
     font-size: 0.93rem;
     line-height: 1rem;
 } 

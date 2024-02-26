@@ -358,5 +358,25 @@ textarea {
 
 
 
+@media (min-width: 1280px) {
+   .comments {
+ 
+        @include horiMarg($maxSpace*4);
 
-    
+    &__header {
+        @include dt-sectionHeader;
+    }
+
+   &__new-post {
+    @include horiSpace($maxSpace*10);
+   }
+   
+    #comments__posted {
+        @include horiSpace($maxSpace*10);
+    }
+}
+
+.divider {
+
+}
+}

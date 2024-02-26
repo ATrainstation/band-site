@@ -844,6 +844,26 @@ h4 {
   padding-top: 0.5rem;
 }
 
+@media (min-width: 1280px) {
+  .comments {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+  .comments__header {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+  .comments__new-post {
+    padding-left: 30rem;
+    padding-right: 30rem;
+  }
+  .comments #comments__posted {
+    padding-left: 30rem;
+    padding-right: 30rem;
+  }
+}
 .dt-shows__headers {
   display: none;
 }
@@ -988,5 +1008,24 @@ h4 {
   }
   .dt-shows__headers--loca {
     width: 25%;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    display: flex;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .shows__title {
+    width: 20%;
+  }
+  .shows-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .dt-shows__headers {
+    flex-direction: row;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

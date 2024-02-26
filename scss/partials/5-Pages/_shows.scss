@@ -133,3 +133,25 @@
     }
     
 }
+
+@media (min-width: 1280px) {
+.shows {
+    display: flex;
+    @include horiMarg($maxSpace);
+
+    &__title {
+        width: 20%;
+    }
+}
+    
+    .shows-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dt-shows__headers {
+        flex-direction: row;
+        width: 100%;
+    }
+}

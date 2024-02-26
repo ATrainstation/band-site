@@ -86,8 +86,11 @@ function clearShows() {
     locaValue.className = 'shows__gig__location';
 
     // Buttons and Dividers
+    const contButton = document.createElement('div');
+    contButton.className = "shows__gig__cont";
+
     const buyButton = document.createElement('button');
-    buyButton.className = "shows__gig__button shows__gig__pad";
+    buyButton.className = "shows__gig__button";
 
     const divider = document.createElement('div');
     divider.className = "divider divider--full";
@@ -96,21 +99,27 @@ function clearShows() {
     gigContainer.appendChild(dateContainer);
     dateContainer.appendChild(dateHeader);
     dateContainer.appendChild(dateValue);
+    dateHeader.textContent = 'DATE';
     dateValue.textContent = gig.date;
 
     gigContainer.appendChild(venueContainer);
     venueContainer.appendChild(venueHeader);
     venueContainer.appendChild(venueValue);
+    venueHeader.textContent = 'VENUE';
     venueValue.textContent = gig.venue;
 
     gigContainer.appendChild(locaContainer);
     locaContainer.appendChild(locaHeader);
     locaContainer.appendChild(locaValue);
+    locaHeader.textContent = 'LOCATION';
     locaValue.textContent = gig.location;
-
-    gigContainer.appendChild(buyButton);
+    
+    // gigsListed.appendChild(contButton);
+    gigContainer.appendChild(contButton);
+    contButton.appendChild(buyButton);
     gigContainer.appendChild(divider);
-
+    buyButton.textContent = 'BUY TICKETS'
+    
 })
 };
 

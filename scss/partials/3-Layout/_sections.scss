@@ -38,34 +38,24 @@
         url("../../assets/images/hero-shows.jpg");
     background-size: cover;
     margin: 0;
+    padding: 2rem 1rem;
 
     &__title {
         @include pageHeader;
         color: $white;
-        padding-left: 1rem;
         width: 70%;
+        padding-bottom: 1.5rem;
 
         &__album {
             @include subHeader;
+            font-weight: 400;
             color: #FFF;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             padding-bottom: 1rem;
-            padding-left: 1rem;
         }
-    }
-
-    &__iframe {
-        width: 100%;
-    }
-} 
-
-iframe {
-    width: 100%;
-    padding: 0 1rem;
-    padding-bottom: 5vh;
 }
 }
-
+ }
 
 
     

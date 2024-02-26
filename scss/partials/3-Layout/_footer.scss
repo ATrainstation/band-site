@@ -51,7 +51,7 @@
 
     &__copyright {
         padding: 1rem 0;
-        @include special-text;
+        @include special-text(0.9rem);
     }
 
     @media (min-width: 768px) {

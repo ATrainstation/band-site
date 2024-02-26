@@ -1,30 +1,49 @@
 
 .shows {
+    
     margin-top: 1rem;
     
     &__title {
-        @include pageHeader;
-        padding: 0 1rem;
-        padding-bottom: 1rem;
-        
+        @include sectionHeader;
+        @include headSpace;
+        @include horiMarg($largeSpace);
+        color: black;
     }
 
     &__gig {
+        
+        &__cont {
+            @include vertSpace($smallSpace);
+            @include horiMarg($largeSpace);
+        }
 
         &__header {
+            @include special-text(0.8rem);
             color: $silver;
-            font-weight: 500;
-            font-size: 0.7rem;
+            padding-bottom: $smallSpace;
         }
 
-        &__pad {
-            margin-left: 1rem;
-            margin-right: 1rem;
-            padding-bottom: 1rem;
+        &__date {
+            @include subHeader;
+            color: $black;
+            font-weight: 600;
         }
+
+        &__venue, &__location {
+            @include bodyCopy;
+            color: $darkblk;
+            font-weight: 500;
+           } 
+
+           &__button__cont {
+            display: flex;
+            @include horiSpace($largeSpace);
+           }
 
         &__button {
             @include button($black);
+            width: 100%;
+            margin-top: $smallSpace;
         }
     }
 

@@ -14,3 +14,15 @@ $alabaster: #FAFAFA;
 $avenirReg: url('../assets/Font/AvenirNextLTPro-Regular.otf');
 $avenirDemi: url('../assets/Font/AvenirNextLTPro-demi.otf');
 $avenirBold: url('../assets/Font/AvenirNextLTPro-Bold.otf');
+
+
+
+$spacer: 1rem;
+
+$minSpace: ($spacer*0.25);
+$smallSpace: ($spacer*0.5);
+$medSpace: $spacer;
+$largeSpace: ($spacer*1.5);
+$xlargeSpace: ($spacer*2);
+$maxSpace: ($spacer*3);
+

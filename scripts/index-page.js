@@ -19,10 +19,11 @@ const posts = [
         username: "Isaac Tadesse",
         date: "10/20/2023",
         pfp: "",
-        review: "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough.",
+        review: "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
        
       },
 ];
+
 
 openPosts();
 

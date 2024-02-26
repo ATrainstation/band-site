@@ -2,11 +2,13 @@
 .about {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 1rem;
+    @include horiSpace($largeSpace);
+    margin-top: $smallSpace;
 
     &__title {
         @include sectionHeader;
-        padding-top: 1.5rem;
+        @include headSpace;
+
     }
  
     &__container {
@@ -14,30 +16,29 @@
         height: 40%;
     }
 
-    // Changed aspect ratio to band.jpg to match mockup
+    // Changed aspect ratio of band.jpg to match mockup
     &__image {
-        aspect-ratio: 16 / 10;
+        aspect-ratio: 16 / 9;
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: bottom;
-        padding-bottom: 1rem;
+        padding-bottom: $spacer;
     }
 
     &__quote {
-        font-weight: 600;
-        font-size: 1.12rem;
-        line-height: 2rem;
+        @include quoteBlock;
         padding-bottom: 2.25rem;
-
-        &--itals {
-            font-style: italic;
-        }
 
         // Adjust kerning between italicized quote and non-italicized W
         &--kerning {
-            padding: 0 0.2rem;
+            padding-right: 0.2rem;
+            font-style: italic;
         }
+    }
+
+    cite {
+        font-style: normal;
     }
 
     &__bio {
@@ -47,18 +48,17 @@
 
     &__bio__title {
         @include subHeader;
+        color: black;
         padding-bottom: 1.2rem;
     }
 
-    &__bio__para1 {
+    & p {
         @include bodyCopy;
+        color: $black;
         padding-bottom: 1rem;
+        width: 94%
     }
 
-    &__bio__para2 {
-        @include bodyCopy;
-        padding-bottom: 1rem;
-    }
 
     @media (min-width: 768px) {
         padding: 0 3rem;
@@ -200,29 +200,28 @@
 
 
 .form {
-
     width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    
+
+    &__pfp {
+        // @include horiMarg($spacer);
+        margin-top: 1rem;
+    };
 
     & label {
-        @include special-text;
+        @include special-text(0.8rem);
         width: 100%;
         color: $silver;
 
-    }
-
-    & input::placeholder {
-        color: $black;
     }
 
     &__name {
         border: 1px solid $mercury;
         border-radius: 4px;
         background-color: $alabaster;
-        min-height: 36px;
+        min-height: 48px;
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: $largeSpace;
     } 
 
     &__field {
@@ -232,7 +231,7 @@
  
         width: 100%;
         height: 15vh;
-        min-height: 36px;
+        min-height: 48px;
         margin-top: 4px;
         margin-bottom: 1rem;
 
@@ -243,21 +242,32 @@
     
 
     &__submit {
-        @include special-text;
         @include button($black);
         width: 100%;
     }
 }
 
-.comments {
+::placeholder {
+    color: $black;
+    @include bodyCopy;
+    padding-left: $spacer;
+};
 
+textarea {
+     resize: none;
+
+&::placeholder {
+    padding-top: 0.5rem;
+};
+};
+
+.comments {
+    @include horiMarg($largeSpace);
     padding-top: 2vh;
     
     &__header {
         @include sectionHeader;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 1rem;
+        @include vertMarg($spacer);
     }
     
     &__new-post {
@@ -266,26 +276,45 @@
 
 
     &__pfp {
+        
         background-color: $mercury;
-        width: 36px;
-        height: 36px;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
-        margin: 1rem 1rem;
+        margin-right: $xlargeSpace;
+        object-fit: cover;
+        object-position: left;
     }
     
     &__text {
-        width: 80%;
+        width: 100%;
     }
 
     &__post {
         display: flex;
+        // margin: 0 1rem;
 
         &__top {
+            @include vertSpace($smallSpace);
             display: flex;
-            padding-bottom: 1rem;
             justify-content: space-between;
         }
-        
+
+        &__name {
+            @include subHeader;
+            font-weight: 600;
+            color: $black;
+        }
+
+        &__date {
+            @include special-text(1.1rem);
+            color: $silver;
+        } 
+
+        &__comment {
+            @include bodyCopy;
+            
+        }
     }
 
     @media (min-width: 768px) {

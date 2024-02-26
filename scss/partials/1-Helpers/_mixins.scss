@@ -29,25 +29,34 @@
 // Mobile Text Styles
 @mixin pageHeader {
     @include demi;
-    font-size: 1.75rem;
+    font-size: 2.1rem;
     line-height: 2.75rem;
 } 
 
 @mixin sectionHeader {
     @include demi;
-    font-size: 1.8rem;
-    line-height: 2.75rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: $black;
 } 
 
 @mixin subHeader {
-    @include medium;
-    font-size: 1.16rem;
-    line-height: 1.2rem;
+    @include demi;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
 } 
+
+@mixin quoteBlock {
+    color: $black;
+    font-weight: 600;
+    font-size: 1.18rem;
+    line-height: 2rem;
+    text-align: justify;
+}
 
 @mixin bodyCopy {
     @include regular;
-    font-size: 0.95rem;
+    font-size: 1.06rem;
     line-height: 1.6rem;
 } 
 
@@ -57,9 +66,9 @@
     line-height: 1.4rem;
 } 
 
-@mixin special-text {
+@mixin special-text($medSpace: 1rem) {
     @include regular;
-    font-size: 0.86rem;
+    font-size: $medSpace;
     line-height: 1rem;
 } 
 
@@ -108,8 +117,10 @@
 @mixin button ($black) { 
     background-color: $black;
     color: $white;
-    height: 40px;
+    height: 54px;
+    border: none;
     border-radius: 4px;
+    font-size: 1.3rem;
 }
 
 //for above button On hover
@@ -127,3 +138,43 @@
     background-color: $white;
     color: $black;
 }
+
+// Margin and Padding
+@mixin horiSpace($spacer) {
+    padding-left: $spacer;
+    padding-right: $spacer;
+};
+
+@mixin vertSpace($spacer) {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+};
+
+@mixin horiMarg ($spacer) {
+    margin-left: $spacer;
+    margin-right: $spacer;
+};
+
+@mixin vertMarg ($spacer) {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+};
+
+
+@mixin headSpace {
+    padding-top: $largeSpace;
+    padding-bottom: $medSpace;
+};
+
+@mixin dt-headSpace {
+    padding-top: $maxSpace;
+    padding-bottom: $xlargeSpace;
+};
+
+@mixin componentPad {
+    padding: $spacer;
+};
+
+@mixin componentPad {
+    padding: $xlSpace;
+};

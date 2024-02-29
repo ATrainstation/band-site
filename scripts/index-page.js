@@ -1,170 +1,182 @@
+let apiKey = '577cc8f6-2716-45b4-86a4-74684f999ada';
+let api = new BandSiteApi(apiKey);
 
-const posts = [
-  {
-    username: "Victor Pinto",
-    date: "11/02/2023",
-    pfp: "",
-    review: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    
-  },
-  {
-    username: "Christina Cabrera",
-    date: "10/28/2023",
-    pfp: "",
-    review: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-
-  },
-
-  {
-        username: "Isaac Tadesse",
-        date: "10/20/2023",
-        pfp: "",
-        review: "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-       
-      },
-];
 
 
 openPosts();
-
-const form = document.getElementById('comments-form')
-
-form.addEventListener("submit", function (post) {
-  post.preventDefault();
-
-  const username = post.target.username.value;
-  const review = post.target.review.value;
-  const date = new Date();
-
-  // Format date and time
-  const formattedDate = date.toLocaleDateString( {
-    
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric'
-});
-
-// Define object name variable pair, store variables in object
-  const newPost = {
-    username,
-    review,
-    date: formattedDate,
-};
-
-
-// VALIDATION SECTION
-
-
-// if (username.length > 31) {
-//     alert("Sorry, your username needs to be shorter than 30 letters, please use a short form or nickname.");
-//     return;
-// }
-
-//   if (review.length < 5) {
-//     alert("Your comment is too short, you've gotta have more to say...");
-//     return;
-// }
-
-const userNameField = document.getElementById('username');
-const reviewField = document.getElementById('review');
-
-if (username.length === 0 || review.length === 0) {
-
-    if (username.length === 0 && review.length === 0) {
-    userNameField.classList.add('form__field--error');
-    userNameField.removeAttribute('placeholder');
-    reviewField.classList.add('form__field--error');
-    reviewField.removeAttribute('placeholder');
-    return;
-    
-  } else if (username.length === 0) {
-    userNameField.classList.add('form__field--error');
-    userNameField.removeAttribute('placeholder');
-    return;
-  }
-  else if (review.length === 0) {
-   reviewField.classList.add('form__field--error');
-    reviewField.removeAttribute('placeholder');
-    return;
-  }
-  else {
-    userNameField.classList.remove('form__field--error');
-    reviewField.classList.remove('form__field--error');
-  }
-  };
-
-// Add the submitted post to the array
-posts.unshift(newPost);
-
-
-clearPosts();
-
-// Add the submitted post to the previously posted
-openPosts();
-
-// Reset placeholders in form fields
-post.target.reset();
 
 function clearPosts() {
   const posted = document.getElementById('comments__posted');
   while (posted.firstChild) {
-      posted.removeChild(posted.firstChild);
+    posted.removeChild(posted.firstChild);
+
+  }
+};
+
+async function openPosts() {
+
+  const submissions = await api.getComments()
+  console.log(submissions);
+
+  const posted = document.getElementById('comments__posted');
+
+  submissions.forEach(function (comment) {
+    const article = document.createElement('article');
+    article.className = 'comments__post';
+
+    const pfpDiv = document.createElement('div');
+    pfpDiv.className = 'comments__post__pfp';
+
+    const pfpImg = document.createElement('img');
+    pfpImg.className = 'comments__pfp';
+    pfpImg.src = "assets/images/transparent.png";
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'comments__container';
+
+    article.appendChild(contentDiv);
+    contentDiv.appendChild(pfpDiv);
+    pfpDiv.appendChild(pfpImg);
+    
+
+    const textDiv = document.createElement('div');
+    textDiv.className = 'comments__text';
+
+
+    const topDiv = document.createElement('div');
+    topDiv.className = 'comments__post__top';
+
+    const nameHeading = document.createElement('h3');
+    nameHeading.className = 'comments__post__name';
+    nameHeading.textContent = comment.name;
+
+    const datePara = document.createElement('p');
+    datePara.className = 'comments__post__date';
+    datePara.textContent = comment.timestamp;
+
+    
+
+    topDiv.appendChild(nameHeading);
+    topDiv.appendChild(datePara);
+
+    const commentDiv = document.createElement('div');
+
+    const commentPara = document.createElement('p');
+    commentPara.className = 'comments__post__comment';
+    commentPara.textContent = comment.comment;
+
+    commentDiv.appendChild(commentPara);
+
+   
+
+    textDiv.appendChild(topDiv);
+    textDiv.appendChild(commentDiv);
+    contentDiv.appendChild(textDiv);
+
+    // Delete Button
+    const deleteButton = document.createElement('button')
+    deleteButton.className = 'comments__delete';
+    deleteButton.textContent = 'DELETE';
+
+    deleteButton.dataset.commentId = comment.id;
+
+    // Like Button
+    const likeButton = document.createElement('button')
+    likeButton.className = 'comments__delete';
+    likeButton.textContent = 'LIKE';
+
+    likeButton.dataset.commentId = comment.id;
   
-}};
+    // Delete Api interaction
+    deleteButton.addEventListener("click", async function (deletePost) {
+      const commentIdToDelete = deletePost.target.dataset.commentId;
+      const delPostResponse = await api.deleteComment(commentIdToDelete);
+
+      clearPosts();
+      openPosts();
+    });
+
+      article.appendChild(deleteButton);
+
+      // Like api Interaction
+      likeButton.addEventListener("click", async function (likePost) {
+        const commentIdToLike = likePost.target.dataset.commentId;
+        const likePostResponse = await api.likeComment(commentIdToLike);
+  
+        clearPosts();
+        openPosts();
+      });
+
+      article.appendChild(likeButton);
+      posted.appendChild(article);
+
+    const divider = document.createElement('div');
+    divider.className = 'divider';
+    posted.appendChild(divider);
+
+
+     
+    
+
+  })
+};
+
+const form = document.getElementById('comments-form')
+
+form.addEventListener("submit", async function (post) {
+  post.preventDefault();
+
+  const username = post.target.username.value;
+  const review = post.target.review.value;
+
+  const postData = {
+    name: username,
+    comment: review,
+  }
+
+    const postCommentResponse = await api.postComment(JSON.stringify(postData));
+    clearPosts()
+    openPosts();
 });
 
 
-function openPosts() {
-  const posted = document.getElementById('comments__posted');
+ 
+  // VALIDATION SECTION
 
-  posts.forEach(function (comment) {
-const article = document.createElement('article');
-article.className = 'comments__post';
+  const userNameField = document.getElementById('username');
+  const reviewField = document.getElementById('review');
 
-const pfpDiv = document.createElement('div');
-pfpDiv.className = 'comments__post__pfp';
+  // if (username.length === 0 || review.length === 0) {
 
-const pfpImg = document.createElement('img');
-pfpImg.className = 'comments__pfp';
-pfpImg.src = "assets/images/transparent.png"; 
+  //   if (username.length === 0 && review.length === 0) {
+  //     userNameField.classList.add('form__field--error');
+  //     userNameField.removeAttribute('placeholder');
+  //     reviewField.classList.add('form__field--error');
+  //     reviewField.removeAttribute('placeholder');
+  //     return;
 
-pfpDiv.appendChild(pfpImg);
-article.appendChild(pfpDiv);
+  //   } else if (username.length === 0) {
+  //     userNameField.classList.add('form__field--error');
+  //     userNameField.removeAttribute('placeholder');
+  //     return;
+  //   }
+  //   else if (review.length === 0) {
+  //     reviewField.classList.add('form__field--error');
+  //     reviewField.removeAttribute('placeholder');
+  //     return;
+  //   }
+  //   else {
+  //     userNameField.classList.remove('form__field--error');
+  //     reviewField.classList.remove('form__field--error');
+  //   }
+  // };
 
-const textDiv = document.createElement('div');
-textDiv.className = 'comments__text';
 
-const topDiv = document.createElement('div');
-topDiv.className = 'comments__post__top';
 
-const nameHeading = document.createElement('h3');
-nameHeading.className = 'comments__post__name';
-nameHeading.textContent = comment.username; 
+// // Add the submitted post to the array
+// posts.unshift(newPost);
 
-const datePara = document.createElement('p');
-datePara.className = 'comments__post__date';
-datePara.textContent = comment.date; 
 
-topDiv.appendChild(nameHeading);
-topDiv.appendChild(datePara);
-
-const commentDiv = document.createElement('div');
-
-const commentPara = document.createElement('p');
-commentPara.className = 'comments__post__comment';
-commentPara.textContent = comment.review;
-
-commentDiv.appendChild(commentPara);
-
-textDiv.appendChild(topDiv);
-textDiv.appendChild(commentDiv);
-
-article.appendChild(textDiv);
-
-posted.appendChild(article);
-
-const divider = document.createElement('div');
-divider.className = 'divider';
-posted.appendChild(divider);
-
-})};
+// clearPosts();
+// // Reset placeholders in form fields
+// post.target.reset();

@@ -211,7 +211,7 @@
         display: flex;
     }
 
-
+ 
     &__pfp {
         
         background-color: $mercury;
@@ -222,19 +222,38 @@
         object-fit: cover;
         object-position: left;
     }
-    
+
     &__text {
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
+    }
+
+    &__container {
+        display: flex;
+        padding-bottom: 1rem;
+    }
+
+    &__delete {
+        @include button($black);
+        width: 30%;
+        margin-left: 5rem;
     }
 
     &__post {
         display: flex;
+        flex-wrap: wrap;
         // margin: 0 1rem;
+
+        &__pfp {
+            width: 10%;
+        }
 
         &__top {
             @include vertSpace($smallSpace);
             display: flex;
             justify-content: space-between;
+            width: 100%
         }
 
         &__name {
@@ -250,7 +269,6 @@
 
         &__comment {
             @include bodyCopy;
-            
         }
     }
 
@@ -359,8 +377,16 @@ textarea {
 
 
 @media (min-width: 1280px) {
-   .comments {
- 
+   .about {
+
+    &__quote {
+        font-size: 2rem;
+        line-height: 3rem;
+        width: 80%;
+    }
+   }
+   
+    .comments {
         @include horiMarg($maxSpace*4);
 
     &__header {
@@ -368,11 +394,11 @@ textarea {
     }
 
    &__new-post {
-    @include horiSpace($maxSpace*10);
+    @include horiSpace($maxSpace*6);
    }
    
     #comments__posted {
-        @include horiSpace($maxSpace*10);
+        @include horiSpace($maxSpace*6);
     }
 }
 

@@ -1,43 +1,50 @@
-const shows = [
-    {
-        date: "Mon Sept 09 2024",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
+// const shows = [
+//     {
+//         date: "Mon Sept 09 2024",
+//         venue: "Ronald Lane",
+//         location: "San Francisco, CA"
+//     },
 
-    {
-        date: "Tue Sept 17 2024",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
+//     {
+//         date: "Tue Sept 17 2024",
+//         venue: "Pier 3 East",
+//         location: "San Francisco, CA"
+//     },
 
-    {
-        date: "Sat Oct 12 2024",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
+//     {
+//         date: "Sat Oct 12 2024",
+//         venue: "View Lounge",
+//         location: "San Francisco, CA"
+//     },
 
-    {
-        date: "Sat Nov 16 2024",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
+//     {
+//         date: "Sat Nov 16 2024",
+//         venue: "Hyatt Agency",
+//         location: "San Francisco, CA"
+//     },
 
-    {
-        date: "Fri Nov 29 2024",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
+//     {
+//         date: "Fri Nov 29 2024",
+//         venue: "Moscow Center",
+//         location: "San Francisco, CA"
+//     },
 
-    {
-        date: "Wed Dec 18 2024",
-        venue: "Press Club",
-        location: "San Francisco, CA"
-    },
-];
+//     {
+//         date: "Wed Dec 18 2024",
+//         venue: "Press Club",
+//         location: "San Francisco, CA"
+//     },
+// ];
 
-    clearShows();
-    openShows();
+
+// async function updateShows(bandSiteApi) {
+//     const showDates = await bandSiteApi.getShowDates();
+//     clearShows();
+//     openShows(showDates);
+// }
+
+// updateShows();
+
 
 function clearShows() {
     const gigsListed = document.querySelector('.shows__gigs');
@@ -46,11 +53,20 @@ function clearShows() {
     }
   };
 
- function openShows() {
+clearShows();
+
+const apiKey = '577cc8f6-2716-45b4-86a4-74684f999ada';
+const api = new BandSiteApi(apiKey);
+
+
+async function openShows() {
+    
+    const showDates = await api.getShowDates()
+
     const gigsListed = document.querySelector('.shows__gigs');
     const showsHeaders = document.querySelector('.dt-shows__headers');
 
-    shows.forEach(function (gig) {
+    showDates.forEach(function (gig) {
     const gigContainer = document.createElement('div');
     gigContainer.className = 'shows__gig';
 
@@ -121,8 +137,8 @@ function clearShows() {
     gigContainer.appendChild(divider);
     buyButton.textContent = 'BUY TICKETS'
     
-})
-};
+    })};
+
 
 document.addEventListener('DOMContentLoaded', function () {
     clearShows();

@@ -46,22 +46,22 @@ li {
 }
 
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir";
-  src: url("../assets/Font/AvenirNextLTPro-Regular.otf");
+  font-family: "Avenir", sans-serif;
+  src: url("../assets/Font/AvenirNextLTProLightOblique.otf");
   font-weight: 500;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   src: url("../assets/Font/AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   src: url("../assets/Font/AvenirNextLTPro-Bold.otf");
   font-weight: 700;
 }
@@ -107,7 +107,7 @@ h4 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 1.5rem;
+  padding-top: 16px;
   background-color: #323232;
   color: #fff;
   height: 80px;
@@ -123,9 +123,8 @@ h4 {
   background-color: rgba(50, 50, 50, 0);
 }
 .nav__title img {
-  max-height: 20px;
-  max-width: 120px;
-  width: auto;
+  min-height: 20px;
+  min-width: 120px;
 }
 .nav__page {
   background-color: #323232;
@@ -143,8 +142,9 @@ h4 {
 .nav__page:hover {
   animation: neonColorChange 2s infinite;
   font-size: 1.3rem;
-  border-top: 2px solid #FFF;
   padding-top: 0.7rem;
+  border-bottom: 5px solid #FFF;
+  padding-bottom: 0.5rem;
 }
 .nav__links {
   display: flex;
@@ -187,7 +187,7 @@ h4 {
     width: 50%;
   }
   .nav__page {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.123rem;
   }
   .nav__link--active {
     max-width: 100px;
@@ -196,6 +196,52 @@ h4 {
 @media (min-width: 1280px) {
   .nav {
     padding-left: 4.5rem;
+  }
+}
+
+.spacer {
+  height: 80px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 32vh;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  margin: 0;
+}
+.hero__title {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  line-height: 2.75rem;
+  color: #FFF;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 68vh;
+  }
+  .hero__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4.25rem;
+    padding-top: 4.5rem;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 98vh;
+  }
+  .hero__title {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4.25rem;
+    padding-left: 8rem;
   }
 }
 
@@ -700,16 +746,37 @@ h4 {
      object-position: left;
 }
 .comments__text {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
+}
+.comments__container {
+  display: flex;
+  padding-bottom: 1rem;
+}
+.comments__delete {
+  background-color: #323232;
+  color: #FFF;
+  height: 54px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  width: 30%;
+  margin-left: 5rem;
 }
 .comments__post {
   display: flex;
+  flex-wrap: wrap;
+}
+.comments__post__pfp {
+  width: 10%;
 }
 .comments__post__top {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .comments__post__name {
   font-family: "Avenir", sans-serif;
@@ -845,6 +912,11 @@ h4 {
 }
 
 @media (min-width: 1280px) {
+  .about__quote {
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 80%;
+  }
   .comments {
     margin-left: 12rem;
     margin-right: 12rem;
@@ -856,12 +928,12 @@ h4 {
     line-height: 2.6rem;
   }
   .comments__new-post {
-    padding-left: 30rem;
-    padding-right: 30rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
   }
   .comments #comments__posted {
-    padding-left: 30rem;
-    padding-right: 30rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
   }
 }
 .dt-shows__headers {

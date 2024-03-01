@@ -35,7 +35,7 @@ class BandSiteApi {
     }
 
 
-    async postComment() {
+    async postComment(name, comment) {
           // Format date and time
         //   const date = new Date();
         //   const formattedDate = date.toISOString(
@@ -47,22 +47,18 @@ class BandSiteApi {
     // );
   
     // Define object name variable pair, store variables in object
-    const postData = {
-      name: username,
-      comment: review,
-    //   timestamp: formattedDate,
-    }
+    // const postData = {
+    //   name: username,
+    //   comment: review,
+    // //   timestamp: formattedDate,
+    // }
 
         try {
             const postResponse = await axios.post(
-                `${this.Url}/comments?api_key=${apiKey}`, JSON.stringify(postData), {
-                headers: {
-                    'Content-Type': 'application/json'
-                }    
-        })
+                `${this.Url}/comments?api_key=${apiKey}`, {name, comment});
 
-        console.log(postResponse.data);
-            return JSON.stringify(postResponse);
+        console.log(postResponse);
+            return postResponse;
 
         } catch (err) {
             console.error('Error posting comment: Try Again', err);
@@ -83,10 +79,10 @@ class BandSiteApi {
     }
 
 
-    async likeComment() {
+    async likeComment(commentId) {
 
       try {
-          const likeResponse = await axios.post(
+          const likeResponse = await axios.put(
               `${this.Url}/comments/${commentId}/like?=&api_key=${apiKey}`
           );
 

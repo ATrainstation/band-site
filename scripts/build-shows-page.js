@@ -117,13 +117,30 @@ async function openShows() {
     dateContainer.appendChild(dateHeader);
     dateContainer.appendChild(dateValue);
     dateHeader.textContent = 'DATE';
-    dateValue.textContent = gig.date;
+
+    // Date conversion
+    const unixEpochTimeMS = gig.date;
+    const newDate = new Date(unixEpochTimeMS)
+
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    const formattedDate = newDate.toLocaleString('en-US', options).split(', ').join(' ');
+
+         //   const date = new Date();
+        //   const formattedDate = date.toISOString(
+    //   {
+    //   month: '2-digit',
+    //   day: '2-digit',
+    //   year: 'numeric'
+    // }
+    // );
+
+    dateValue.textContent = formattedDate;
 
     gigContainer.appendChild(venueContainer);
     venueContainer.appendChild(venueHeader);
     venueContainer.appendChild(venueValue);
     venueHeader.textContent = 'VENUE';
-    venueValue.textContent = gig.venue;
+    venueValue.textContent = gig.place;
 
     gigContainer.appendChild(locaContainer);
     locaContainer.appendChild(locaHeader);

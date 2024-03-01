@@ -752,7 +752,9 @@ h4 {
 }
 .comments__container {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 1rem;
+  width: 100%;
 }
 .comments__delete {
   background-color: #323232;
@@ -761,8 +763,18 @@ h4 {
   border: none;
   border-radius: 4px;
   font-size: 1.3rem;
-  width: 30%;
-  margin-left: 5rem;
+  width: 20%;
+  margin-left: 10%;
+}
+.comments__like {
+  background-color: #323232;
+  color: #FFF;
+  height: 54px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  width: 20%;
+  margin-left: 10%;
 }
 .comments__post {
   display: flex;
@@ -792,6 +804,7 @@ h4 {
   font-size: 1.1rem;
   line-height: 1rem;
   color: #AFAFAF;
+  justify-self: flex-end;
 }
 .comments__post__comment {
   font-family: "Avenir", sans-serif;
@@ -918,8 +931,8 @@ h4 {
     width: 80%;
   }
   .comments {
-    margin-left: 12rem;
-    margin-right: 12rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
   }
   .comments__header {
     font-family: "Avenir", sans-serif;
@@ -928,12 +941,12 @@ h4 {
     line-height: 2.6rem;
   }
   .comments__new-post {
-    padding-left: 18rem;
-    padding-right: 18rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
   }
   .comments #comments__posted {
-    padding-left: 18rem;
-    padding-right: 18rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
   }
 }
 .dt-shows__headers {

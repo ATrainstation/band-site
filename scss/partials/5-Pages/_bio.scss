@@ -231,13 +231,21 @@
 
     &__container {
         display: flex;
+        justify-content: space-between;
         padding-bottom: 1rem;
+        width: 100%;
     }
 
     &__delete {
         @include button($black);
-        width: 30%;
-        margin-left: 5rem;
+        width: 20%;
+        margin-left: 10%;
+        }
+
+    &__like {
+        @include button($black);
+        width: 20%;
+        margin-left: 10%;
     }
 
     &__post {
@@ -253,7 +261,7 @@
             @include vertSpace($smallSpace);
             display: flex;
             justify-content: space-between;
-            width: 100%
+            width: 100%;
         }
 
         &__name {
@@ -265,6 +273,7 @@
         &__date {
             @include special-text(1.1rem);
             color: $silver;
+            justify-self: flex-end;
         } 
 
         &__comment {
@@ -297,6 +306,7 @@
         @include horiMarg($maxSpace);
     }
 }
+
 
 .form {
 
@@ -387,18 +397,18 @@ textarea {
    }
    
     .comments {
-        @include horiMarg($maxSpace*4);
+        @include horiMarg($maxSpace*3);
 
     &__header {
         @include dt-sectionHeader;
     }
 
    &__new-post {
-    @include horiSpace($maxSpace*6);
+    @include horiSpace($maxSpace*3);
    }
    
     #comments__posted {
-        @include horiSpace($maxSpace*6);
+        @include horiSpace($maxSpace*3);
     }
 }
 

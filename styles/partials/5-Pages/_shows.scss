@@ -68,35 +68,32 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding-bottom: $smallSpace;
   
         &__cont {
-          &--date {
-            width: 35%;
-          }
+        width: 9rem;
   
-          &--venue,
-          &--loca {
-            width: 25%;
-          }
-  
-          &__button {
-            // width: auto;
+          &--button {
+            width: 12rem;
           }
         }
   
         &__button--hide {
-          display: none;
+            @include button($black);
+            width: 100%;
+            display: none;
         }
   
         &__header {
           @include special-text(0.8rem);
           color: $silver;
           display: none;
+        
         }
   
         &__button {
           @include button($black);
-          padding: 1rem 4rem;
+          padding: 1rem $xlargeSpace;
           width: 100%;
         }
       }
@@ -113,22 +110,21 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 55%;
+      padding-right: 3.5rem;
+      width: 100%;
   
-      &--date {
-        width: 30%;
-      }
-  
-      &--venue {
-        width: 20%;
-      }
-
+      &--date,
+      &--venue,
       &--loca {
-     
+        width: 9rem;
+      } 
+
+      &--button {
+        display: block;
+        width: 12rem;
       }
-  
     }
-  }
+    }
   
   @media (min-width: $desktop) {
     .shows {
@@ -149,6 +145,7 @@
   
     .dt-shows__headers {
       flex-direction: row;
-      width: 65%;
+      padding-top: $maxSpace;
+      padding-right: 0rem;
     }
   }

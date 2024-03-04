@@ -1130,15 +1130,28 @@ h4 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-bottom: 0.5rem;
   }
-  .shows__gig__cont--date {
-    width: 35%;
+  .shows__gig__cont {
+    width: 9rem;
   }
-  .shows__gig__cont--venue, .shows__gig__cont--loca {
-    width: 25%;
+  .shows__gig__cont--button {
+    width: 12rem;
   }
   .shows__gig__button--hide {
+    background-color: #323232;
+    color: #FFF;
+    height: 54px;
+    width: auto;
+    border: none;
+    border-radius: 4px;
+    line-height: 1.3rem;
+    font-size: 1.3rem;
+    width: 100%;
     display: none;
+  }
+  .shows__gig__button--hide:hover {
+    background-color: #000;
   }
   .shows__gig__header {
     font-weight: 400;
@@ -1156,7 +1169,7 @@ h4 {
     border-radius: 4px;
     line-height: 1.3rem;
     font-size: 1.3rem;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     width: 100%;
   }
   .shows__gig__button:hover {
@@ -1175,13 +1188,15 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 55%;
+    padding-right: 3.5rem;
+    width: 100%;
   }
-  .dt-shows__headers--date {
-    width: 30%;
+  .dt-shows__headers--date, .dt-shows__headers--venue, .dt-shows__headers--loca {
+    width: 9rem;
   }
-  .dt-shows__headers--venue {
-    width: 20%;
+  .dt-shows__headers--button {
+    display: block;
+    width: 12rem;
   }
 }
 @media (min-width: 1280px) {
@@ -1201,6 +1216,7 @@ h4 {
   }
   .dt-shows__headers {
     flex-direction: row;
-    width: 65%;
+    padding-top: 3rem;
+    padding-right: 0rem;
   }
 }/*# sourceMappingURL=main.css.map */

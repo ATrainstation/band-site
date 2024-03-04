@@ -25,7 +25,7 @@ async function openShows() {
 
     // DATE
     const dateContainer = document.createElement('div');
-    dateContainer.className = 'shows__gig__cont shows__gig__cont--big';
+    dateContainer.className = 'shows__gig__cont shows__gig__cont--date';
 
     const dateHeader = document.createElement('h4');
     dateHeader.className = 'shows__gig__header'
@@ -36,7 +36,7 @@ async function openShows() {
     // VENUE
 
     const venueContainer = document.createElement('div');
-    venueContainer.className = 'shows__gig__cont';
+    venueContainer.className = 'shows__gig__cont shows__gig__cont--venue';
 
     const venueHeader = document.createElement('h4');
     venueHeader.className = 'shows__gig__header'
@@ -57,7 +57,7 @@ async function openShows() {
 
     // Buttons and Dividers
     const contButton = document.createElement('div');
-    contButton.className = "shows__gig__cont";
+    contButton.className = "shows__gig__cont shows__gig__cont--button";
 
     const buyButton = document.createElement('button');
     buyButton.className = "shows__gig__button";

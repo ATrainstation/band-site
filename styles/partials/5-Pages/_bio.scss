@@ -114,11 +114,11 @@ body {
     }
 
     @media (min-width: $desktop) {
-        padding: 0 8rem;
+        padding: 0 $maxSpace*3.5;
         @include dt-sectionHeader;
 
         &__title {
-            padding-bottom: 2rem;
+            padding-bottom: $xlargeSpace;
         }
 
         &__image {
@@ -194,6 +194,8 @@ body {
     }
 
     @media (min-width: $desktop) {
+        @include horiMarg($maxSpace*2);
+
         &__title {
             padding-top: 3rem;
             padding-bottom: 2rem;

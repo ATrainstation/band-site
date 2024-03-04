@@ -47,7 +47,7 @@ async function openShows() {
     // LOCATION
 
     const locaContainer = document.createElement('div');
-    locaContainer.className = 'shows__gig__cont shows__gig__cont--big';
+    locaContainer.className = 'shows__gig__cont shows__gig__cont--loca';
 
     const locaHeader = document.createElement('h4');
     locaHeader.className = 'shows__gig__header'

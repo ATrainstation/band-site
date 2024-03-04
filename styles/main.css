@@ -708,7 +708,7 @@ h4 {
   font-size: 2rem;
   line-height: 2.5rem;
   color: #323232;
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
 }
 .gallery_photos {
@@ -1143,7 +1143,7 @@ h4 {
     width: 9rem;
   }
   .shows__gig__cont--loca {
-    width: 11rem;
+    width: 12rem;
   }
   .shows__gig__cont--button {
     width: 12rem;
@@ -1201,8 +1201,11 @@ h4 {
     padding-right: 3.5rem;
     width: 100%;
   }
-  .dt-shows__headers--date, .dt-shows__headers--venue, .dt-shows__headers--loca {
+  .dt-shows__headers--date, .dt-shows__headers--venue {
     width: 9rem;
+  }
+  .dt-shows__headers--loca {
+    width: 12rem;
   }
   .dt-shows__headers--button {
     display: block;

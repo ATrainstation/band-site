@@ -75,7 +75,7 @@
         width: 9rem;
 
           &--loca {
-            width: 11rem;
+            width: 12rem;
           }
   
           &--button {
@@ -98,7 +98,7 @@
   
         &__button {
           @include button($black);
-          padding: 1rem $xlargeSpace;
+          padding: $spacer $xlargeSpace;
           width: 100%;
         }
       }
@@ -119,14 +119,17 @@
       width: 100%;
   
       &--date,
-      &--venue,
-      &--loca {
-        width: 9rem;
+      &--venue{
+        width: $maxSpace*3;
       } 
+      
+      &--loca {
+        width: $maxSpace*4;
+      }
 
       &--button {
         display: block;
-        width: 12rem;
+        width: $maxSpace*4;
       }
     }
     }

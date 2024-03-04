@@ -16,7 +16,7 @@
         padding-left: 1rem;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         height: 60vh;
 
         &__title {
@@ -26,7 +26,7 @@
         }
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: $desktop) {
         height: 90vh;
 
         &__title {
@@ -73,7 +73,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
     display: flex;
     @include horiSpace($maxSpace);
     width: 100%;
@@ -101,7 +101,7 @@
 
 }
 
-@media (min-width: 1280px) {
+@media (min-width: $desktop) {
     @include horiSpace($maxSpace*2);
     display: flex;
     flex-wrap: wrap;

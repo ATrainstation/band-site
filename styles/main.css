@@ -5,11 +5,6 @@
 }
 @font-face {
   font-family: "Avenir", sans-serif;
-  src: url("../assets/font/Avenir-Med.otf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Avenir", sans-serif;
   src: url("../assets/font/AvenirNextLTPro-Demi.otf");
   font-weight: 600;
 }
@@ -23,11 +18,6 @@
   font-family: "Avenir", sans-serif;
   src: url("../assets/font/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
-}
-@font-face {
-  font-family: "Avenir", sans-serif;
-  src: url("../assets/font/Avenir-Med.otf");
-  font-weight: 500;
 }
 @font-face {
   font-family: "Avenir", sans-serif;
@@ -66,7 +56,7 @@
   }
 }
 * {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
 }
 
 li {
@@ -101,11 +91,6 @@ h4 {
   font-family: "Avenir", sans-serif;
   src: url("../assets/font/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
-}
-@font-face {
-  font-family: "Avenir", sans-serif;
-  src: url("../assets/font/Avenir-Med.otf");
-  font-weight: 500;
 }
 @font-face {
   font-family: "Avenir", sans-serif;
@@ -149,7 +134,7 @@ h4 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
+  padding-top: 1rem;
   background-color: #323232;
   color: #fff;
   height: 80px;
@@ -254,8 +239,7 @@ h4 {
   margin: 0;
 }
 .hero__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.1rem;
   line-height: 2.75rem;
   color: #FFF;
@@ -266,7 +250,6 @@ h4 {
     height: 68vh;
   }
   .hero__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 6rem;
@@ -279,7 +262,6 @@ h4 {
     height: 98vh;
   }
   .hero__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 6rem;
@@ -296,8 +278,7 @@ h4 {
   margin: 0;
 }
 .hero__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.1rem;
   line-height: 2.75rem;
   color: #FFF;
@@ -308,7 +289,6 @@ h4 {
     height: 60vh;
   }
   .hero__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 6rem;
@@ -321,7 +301,6 @@ h4 {
     height: 90vh;
   }
   .hero__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 6rem;
@@ -345,8 +324,7 @@ h4 {
   max-width: 85%;
 }
 .hero--shows__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.1rem;
   line-height: 2.75rem;
   color: #FFF;
@@ -354,7 +332,6 @@ h4 {
   padding-bottom: 3rem;
 }
 .hero--shows__title__album {
-  font-family: "Avenir", sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.5rem;
@@ -371,14 +348,12 @@ h4 {
     width: 100%;
   }
   .hero--shows__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 6rem;
     width: 90%;
   }
   .hero--shows__title__album {
-    font-family: "Avenir", sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2.75rem;
@@ -405,7 +380,6 @@ h4 {
     height: 90vh;
   }
   .hero--shows__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     font-size: 3.8rem;
     line-height: 6rem;
@@ -443,14 +417,12 @@ h4 {
 .footer__info {
   display: flex;
   flex-direction: column;
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4rem;
   padding-bottom: 2rem;
 }
 .footer__info__name {
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4rem;
@@ -473,7 +445,6 @@ h4 {
 }
 .footer__copyright {
   padding: 1rem 0;
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1rem;
@@ -490,21 +461,18 @@ h4 {
     justify-content: space-between;
     gap: 0.2rem;
     width: 100%;
-    font-family: "Avenir", sans-serif;
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 1.25rem;
     letter-spacing: 0.025rem;
   }
   .footer__info {
-    font-family: "Avenir", sans-serif;
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 1.25rem;
     letter-spacing: 0.025rem;
   }
   .footer__info__name {
-    font-family: "Avenir", sans-serif;
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 1.25rem;
@@ -519,7 +487,6 @@ h4 {
     padding-left: 4.5rem;
   }
   .footer__copyright {
-    font-family: "Avenir", sans-serif;
     font-weight: 400;
     color: #AFAFAF;
     font-size: 0.93rem;
@@ -551,8 +518,7 @@ h4 {
 .social__title {
   width: 100%;
   padding-bottom: 1.5rem;
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.4rem;
   line-height: 2.6rem;
 }
@@ -598,8 +564,7 @@ h4 {
   margin-top: 0.5rem;
 }
 .about__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   line-height: 2.5rem;
   color: #323232;
@@ -621,7 +586,6 @@ h4 {
   padding-bottom: 1rem;
 }
 .about__quote {
-  font-family: "Avenir", sans-serif;
   font-weight: 600;
   color: #323232;
   font-size: 1.18rem;
@@ -638,13 +602,11 @@ h4 {
 }
 .about__bio {
   width: 100%;
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1.06rem;
   line-height: 1.6rem;
 }
 .about__bio__title {
-  font-family: "Avenir", sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.5rem;
@@ -652,7 +614,6 @@ h4 {
   padding-bottom: 1.2rem;
 }
 .about p {
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1.06rem;
   line-height: 1.6rem;
@@ -665,8 +626,7 @@ h4 {
     padding: 0 3rem;
   }
   .about__title {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.6rem;
     padding-top: 3rem;
@@ -696,7 +656,6 @@ h4 {
     padding: 0 3rem;
   }
   .about__bio__title {
-    font-family: "Avenir", sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2.75rem;
@@ -707,7 +666,6 @@ h4 {
     padding-bottom: 1rem;
   }
   .about__bio__paras p {
-    font-family: "Avenir", sans-serif;
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -716,8 +674,7 @@ h4 {
 @media (min-width: 1280px) {
   .about {
     padding: 0 8rem;
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.6rem;
   }
@@ -729,14 +686,13 @@ h4 {
     padding: 0 6rem;
   }
   .about__quote {
-    font-family: "Avenir", sans-serif;
     font-weight: 700;
     color: #323232;
     font-size: 1.4rem;
     line-height: 2rem;
     text-align: justify;
     padding: 2rem 6rem;
-    width: 90%;
+    width: 85%;
   }
   .about__bio {
     padding: 0 6rem;
@@ -749,8 +705,7 @@ h4 {
   justify-content: center;
 }
 .gallery__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   line-height: 2.5rem;
   color: #323232;
@@ -777,8 +732,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .gallery__title {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.6rem;
     padding-top: 3rem;
@@ -810,8 +764,7 @@ h4 {
   padding-top: 2vh;
 }
 .comments__header {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   line-height: 2.5rem;
   color: #323232;
@@ -860,6 +813,9 @@ h4 {
   line-height: 1.3rem;
   font-size: 1.3rem;
   width: 30%;
+}
+.comments__delete:hover {
+  background-color: #000;
 }
 .comments__like-container {
   display: flex;
@@ -913,7 +869,6 @@ h4 {
   width: 100%;
 }
 .comments__post__name {
-  font-family: "Avenir", sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.5rem;
@@ -921,7 +876,6 @@ h4 {
   color: #323232;
 }
 .comments__post__date {
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1rem;
@@ -929,7 +883,6 @@ h4 {
   justify-self: flex-end;
 }
 .comments__post__comment {
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1.06rem;
   line-height: 1.6rem;
@@ -960,6 +913,26 @@ h4 {
     margin-right: 3rem;
   }
 }
+@media (min-width: 1280px) {
+  .comments__new-post {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+  #comments__posted {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+  .divider {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .divider--form {
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+}
 .form {
   width: 100%;
 }
@@ -967,7 +940,6 @@ h4 {
   margin-top: 1rem;
 }
 .form label {
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 1rem;
@@ -1006,6 +978,9 @@ h4 {
   font-size: 1.3rem;
   width: 100%;
 }
+.form__submit:hover {
+  background-color: #000;
+}
 @media (min-width: 768px) {
   .form__button__container {
     display: flex;
@@ -1024,10 +999,12 @@ h4 {
     font-size: 1.3rem;
     width: 35%;
   }
+  .form__submit:hover {
+    background-color: #000;
+  }
 }
 .form ::-moz-placeholder {
   color: #323232;
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1.06rem;
   line-height: 1.6rem;
@@ -1035,7 +1012,6 @@ h4 {
 }
 .form ::placeholder {
   color: #323232;
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 1.06rem;
   line-height: 1.6rem;
@@ -1057,8 +1033,7 @@ h4 {
     margin-right: 9rem;
   }
   .comments__header {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.6rem;
   }
@@ -1079,8 +1054,7 @@ h4 {
   margin-top: 1rem;
 }
 .shows__title {
-  font-family: "Avenir", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   line-height: 2.5rem;
   color: #323232;
@@ -1105,7 +1079,6 @@ h4 {
   padding-bottom: 0.5rem;
 }
 .shows__gig__header {
-  font-family: "Avenir", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 1rem;
@@ -1113,7 +1086,6 @@ h4 {
   padding-bottom: 0.5rem;
 }
 .shows__gig__date {
-  font-family: "Avenir", sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.5rem;
@@ -1121,7 +1093,6 @@ h4 {
   font-weight: 700;
 }
 .shows__gig__venue, .shows__gig__location {
-  font-family: "Avenir", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1140,12 +1111,13 @@ h4 {
   line-height: 1.3rem;
   font-size: 1.3rem;
   width: 100%;
-  margin: 0.5rem;
+}
+.shows__gig__button:hover {
+  background-color: #000;
 }
 @media (min-width: 768px) {
   .shows__title {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.6rem;
     padding-top: 3rem;
@@ -1169,7 +1141,6 @@ h4 {
     display: none;
   }
   .shows__gig__header {
-    font-family: "Avenir", sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
     line-height: 1rem;
@@ -1188,11 +1159,13 @@ h4 {
     padding: 1rem 4rem;
     width: 100%;
   }
+  .shows__gig__button:hover {
+    background-color: #000;
+  }
 }
 
 @media (min-width: 768px) {
   .dt-shows__headers {
-    font-family: "Avenir", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1rem;

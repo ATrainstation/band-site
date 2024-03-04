@@ -54,7 +54,7 @@
         @include special-text(0.9rem);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 2rem 2rem;
@@ -91,7 +91,7 @@
         }
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: $desktop) {
         justify-content: flex-start;
         padding-left: 5%;
 
@@ -134,7 +134,7 @@
         width: auto;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         width: 70%;
         flex-wrap: wrap;
         flex-direction: row;
@@ -151,7 +151,7 @@
         }
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: $desktop) {
         &__title {
             width: 36.5%;
         }

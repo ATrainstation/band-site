@@ -63,7 +63,7 @@ body {
     }
 
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         padding: 0 3rem;
 
         &__title {
@@ -113,7 +113,7 @@ body {
         }
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: $desktop) {
         padding: 0 8rem;
         @include dt-sectionHeader;
 
@@ -129,7 +129,7 @@ body {
         &__quote {
             @include dt-quoteBlock;
             padding: $xlargeSpace $maxSpace*2;
-            width: 90%;
+            width: 85%;
         }
 
         &__bio {
@@ -172,7 +172,7 @@ body {
         filter: grayscale(0%);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         &__title {
             @include dt-sectionHeader;
             padding-top: 3rem;
@@ -193,7 +193,7 @@ body {
         }
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: $desktop) {
         &__title {
             padding-top: 3rem;
             padding-bottom: 2rem;
@@ -345,7 +345,7 @@ body {
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         &__header {
             @include dt-headSpace;
             @include horiMarg($spacer);
@@ -354,13 +354,11 @@ body {
         &__new-post {
             display: flex;
             @include horiSpace($maxSpace);
-        }
-
-        
+        }        
     }
-
 }
-@media (min-width: 768px) {
+
+@media (min-width: $tablet) {
     #comments__posted {
         @include horiSpace($maxSpace);
     }
@@ -371,6 +369,24 @@ body {
     }
 }
 
+@media (min-width: $desktop) {
+    .comments__new-post {
+        @include horiMarg($maxSpace*3);
+    }
+
+    #comments__posted {
+        @include horiMarg($maxSpace*3);
+    }
+
+    .divider {
+        @include horiSpace(0rem);
+        @include horiMarg(0rem);
+
+        &--form {
+            @include horiMarg($maxSpace*6);
+        }
+    }
+}
 
 .form {
 
@@ -419,7 +435,7 @@ body {
         width: 100%;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         &__button__container {
             display: flex;
             justify-content: flex-end;
@@ -450,7 +466,7 @@ textarea {
 
 
 
-@media (min-width: 1280px) {
+@media (min-width: $desktop) {
    
     .comments {
         @include horiMarg($maxSpace*3);

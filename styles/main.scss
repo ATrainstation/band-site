@@ -1,13 +1,14 @@
 
-@import "partials/2-Basics/_typography.scss";
 @import "partials/1-Helpers/_variables.scss";
+@import "partials/2-Basics/_typography.scss";
 @import "partials/1-Helpers/_mixins.scss";
 @import "partials/1-Helpers/_functions.scss";
 
 @import "partials/2-Basics/_base.scss";
-
-
 @import "partials/2-Basics/_reset.scss";
+
+
+
 @import "partials/3-Layout/_header.scss";
 @import "partials/3-Layout/_sections.scss";
 @import "partials/3-Layout/_footer.scss";

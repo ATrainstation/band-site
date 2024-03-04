@@ -150,7 +150,7 @@ async function openPosts() {
 
     article.appendChild(buttonContainer);
     buttonContainer.appendChild(deleteButton);
-    
+    likeDisplay.innerText =  `Likes: ${comment.likes}`;
     
     likeThumb.addEventListener("click", async function () {
       if (!likeThumb.classList.contains("clicked")) {
@@ -158,27 +158,32 @@ async function openPosts() {
   
           // Like API Interaction
           try {
-              const commentIdToLike = likeThumb.dataset.commentId; // Assuming dataset is set correctly
+              const commentIdToLike = likeThumb.dataset.commentId;
               const likePostResponse = await api.likeComment(commentIdToLike);
-              console.log(likePostResponse);
-  
-              // Update UI or do any other necessary tasks
-              likeThumb.style.content = "url('../assets/Icons/like/thumbs-up-done.png')";
-              console.log(comment.likes);
-          } catch (error) {
+              const updatedComments = await api.getComments(commentIdToLike);
+              const updatedComment = updatedComments.find(comment => comment.id === commentIdToLike);
+
+              if (updatedComment) {
+                  const updatedLikeCount = updatedComment.likes;
+                  likeDisplay.innerText = `Likes: ${updatedLikeCount}`;
+                  likeThumb.style.content = "url('../assets/Icons/like/thumbs-up-done.png')";
+              
+          }} catch (error) {
               console.error('Error liking comment: Try Again', error);
           }
+
       }
-      setTimeout(function() {
-        clearPosts();
-        openPosts();
-    }, 400);
+    //   setTimeout(function() {
+    //     clearPosts();
+    //     openPosts();
+    // }, 400);
+    // likeDisplay.innerText = `Likes: ${comment.likes}`;
   });
 
     // buttonContainer.appendChild(likeButton);
     buttonContainer.appendChild(likeThumb);
     buttonContainer.appendChild(likeDisplay);
-    likeDisplay.textContent = `Likes: ${comment.likes}`;
+    // likeDisplay.textContent = `Likes: ${comment.likes}`;
 
     posted.appendChild(article);
 

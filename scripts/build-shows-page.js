@@ -63,7 +63,7 @@ async function openShows() {
     buyButton.className = "shows__gig__button";
 
     const divider = document.createElement('div');
-    divider.className = "divider divider--full";
+    divider.className = "divider";
 
     gigsListed.appendChild(gigContainer);
     gigContainer.appendChild(dateContainer);

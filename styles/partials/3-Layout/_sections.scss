@@ -44,7 +44,7 @@
         url("../../assets/images/hero-shows.jpg");
     background-size: cover;
     margin: 0;
-    padding: 2rem 1rem;
+    padding: $xlargeSpace $spacer;
     align-items: flex-start;
 
     &__iframe {
@@ -61,13 +61,13 @@
         @include pageHeader;
         color: $white;
         width: 60%;
-        padding-bottom: $maxSpace;
+        padding-bottom: $largeSpace;
 
         &__album {
             @include subHeader;
             font-weight: 400;
             color: $alabaster;
-            padding-top: 1.5rem;
+            padding-top: $largeSpace;
             padding-bottom: $spacer;
         }
 
@@ -92,6 +92,7 @@
         justify-content: flex-start;
         width: 100%;
         padding-right: 40%;
+        padding-bottom: $xlargeSpace;
     }
 
     iframe {
@@ -108,11 +109,10 @@
     flex-direction: row;
     align-items: center;
 
-    height: 90vh;
+    height: 80vh;
 
     &__title {
-        @include dt-pageHeader;
-
+        
         &__container {
             display: flex;
             flex-direction: column;
@@ -122,6 +122,8 @@
 
     &__iframe {
         padding-right: 0;
+        padding-bottom: 0;
+        padding-top: $xlargeSpace;
         width: 50%;
     }
 }

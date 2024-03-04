@@ -806,6 +806,7 @@ h4 {
   justify-content: space-evenly;
   width: 100%;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .comments__delete {
   background-color: #323232;
@@ -1085,6 +1086,10 @@ h4 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.shows__gig__cont--button {
+  display: flex;
+  padding-bottom: 1.5rem;
+}
 .shows__gig__header {
   font-weight: 400;
   font-size: 0.8rem;
@@ -1104,10 +1109,6 @@ h4 {
   font-size: 1.5rem;
   line-height: 1.8rem;
   color: #000;
-}
-.shows__gig__button__cont {
-  display: flex;
-  padding-bottom: 9rem;
 }
 .shows__gig__button {
   background-color: #323232;
@@ -1148,6 +1149,7 @@ h4 {
   }
   .shows__gig__cont--button {
     width: 12rem;
+    padding-bottom: 0.5rem;
   }
   .shows__gig__button--hide {
     background-color: #323232;

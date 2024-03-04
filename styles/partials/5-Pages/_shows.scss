@@ -25,6 +25,11 @@
   
       &__cont {
         @include vertSpace($smallSpace);
+
+        &--button {
+          display: flex;
+          padding-bottom: $largeSpace;
+        }
       }
   
       &__header {
@@ -45,10 +50,7 @@
         color: $darkblk;
       }
   
-      &__button__cont {
-        display: flex;
-        padding-bottom: $maxSpace*3;
-      }
+      
   
       &__button {
         @include button($black);
@@ -79,7 +81,8 @@
           }
   
           &--button {
-            width: 12rem;
+            width: $maxSpace*4;
+            padding-bottom: $smallSpace;
           }
         }
   

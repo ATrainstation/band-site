@@ -32,12 +32,12 @@
 
     &__page {
         @include light-OnDark (#fff);
-        padding: 1rem 0;
+        padding: $spacer 0;
         transition: color 0.35s ease-in-out, font-size 0.4s ease;
         
         &--active {
             border-bottom: 5px solid #FFF;
-            padding-bottom: 0.5rem;
+            padding-bottom: $smallSpace;
         }
 
         &--inactive {
@@ -66,7 +66,6 @@
         text-decoration: none;
         text-align: center;
         width: 100%;
-
         
 
         @media (min-width: $tablet) {
@@ -83,7 +82,7 @@
 
         &__title {
             margin-top: 0.8rem;
-            margin-left: 3rem;
+            margin-left: $maxSpace;
             justify-content: center;
             align-items: center;
         }
@@ -94,18 +93,19 @@
             margin-right: 5rem;
         }
 
+        &__link {
+            max-width: $maxSpace*2;
+        }
+
         &__links {
             display: flex;
-            gap: 1rem;
+            gap: $spacer;
             width: 50%;
         }
 
         &__page {
             padding-bottom: 1.123rem;
-        }
-
-        &__link--active {
-            max-width: 100px;
+            max-width: $maxSpace*2;
         }
     }
 
@@ -130,7 +130,7 @@
     &__title {
         @include pageHeader;
         color: $white;
-        padding-left: 1rem;
+        padding-left: $spacer;
     }
 
     @media (min-width: $tablet) {
@@ -148,7 +148,7 @@
 
         &__title {
             @include dt-pageHeader;
-            padding-left: 8rem;
+            padding-left: $xlargeSpace*4;
         }
     }
 }

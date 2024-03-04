@@ -22,7 +22,7 @@
         &__title {
             @include dt-pageHeader;
             padding-top: 4.5rem;
-            padding-left: 2rem;
+            padding-left: $maxSpace*2;
         }
     }
 
@@ -31,7 +31,7 @@
 
         &__title {
             @include dt-pageHeader;
-            padding-left: 8rem;
+            padding-left: $xlargeSpace*4;
         }
     }
 
@@ -112,6 +112,7 @@
     height: 80vh;
 
     &__title {
+    
         
         &__container {
             display: flex;

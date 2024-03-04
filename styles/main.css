@@ -209,6 +209,9 @@ h4 {
     width: auto;
     margin-right: 5rem;
   }
+  .nav__link {
+    max-width: 6rem;
+  }
   .nav__links {
     display: flex;
     gap: 1rem;
@@ -216,9 +219,7 @@ h4 {
   }
   .nav__page {
     padding-bottom: 1.123rem;
-  }
-  .nav__link--active {
-    max-width: 100px;
+    max-width: 6rem;
   }
 }
 @media (min-width: 1280px) {
@@ -294,7 +295,7 @@ h4 {
     font-size: 4rem;
     line-height: 4.6rem;
     padding-top: 4.5rem;
-    padding-left: 2rem;
+    padding-left: 6rem;
   }
 }
 @media (min-width: 1280px) {

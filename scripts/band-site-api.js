@@ -36,22 +36,6 @@ class BandSiteApi {
 
 
     async postComment(name, comment) {
-          // Format date and time
-        //   const date = new Date();
-        //   const formattedDate = date.toISOString(
-    //   {
-    //   month: '2-digit',
-    //   day: '2-digit',
-    //   year: 'numeric'
-    // }
-    // );
-  
-    // Define object name variable pair, store variables in object
-    // const postData = {
-    //   name: username,
-    //   comment: review,
-    // //   timestamp: formattedDate,
-    // }
 
         try {
             const postResponse = await axios.post(

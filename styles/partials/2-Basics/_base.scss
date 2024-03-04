@@ -8,16 +8,16 @@ li {
 }
 
 .spacer {
-  height: 5rem;
+  height: 5vh;
 }
 
 
 .divider {
   height: 2px;
   background-color: $mercury;
-  @include vertMarg($spacer);
+  margin-bottom: $spacer;
 
   &--full {
-    margin: $largeSpace 0;
+    margin-bottom: $largeSpace;
   }
 }

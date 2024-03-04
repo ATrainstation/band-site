@@ -1,20 +1,21 @@
 @import "_variables.scss";
+@import "../2-Basics/_typography.scss";
 
 // Fonts
-@mixin light {
-    font-family: 'Avenir', sans-serif;
-    font-weight: 300;
-}
+// @mixin light {
+//     font-family: 'Avenir', sans-serif;
+//     font-weight: 300;
+// }
 
 @mixin regular {
     font-family: 'Avenir', sans-serif;
     font-weight: 400;
 }
 
-@mixin medium {
-    font-family: 'Avenir', sans-serif;
-    font-weight: 500;
-}
+// @mixin medium {
+//     font-family: 'Avenir', sans-serif;
+//     font-weight: 500;
+// }
 
 @mixin demi {
     font-family: 'Avenir', sans-serif;
@@ -47,8 +48,8 @@
 } 
 
 @mixin quoteBlock {
+    @include demi;
     color: $black;
-    font-weight: 600;
     font-size: 1.18rem;
     line-height: 2rem;
     text-align: justify;
@@ -75,9 +76,9 @@
 
 // Desktop and Tablet Text Styles
 @mixin dt-pageHeader {
-    @include demi;
+    @include bold;
     font-size: 3.8rem;
-    line-height: 4.25rem;
+    line-height: 6rem;
 } 
 
 @mixin dt-sectionHeader {
@@ -93,8 +94,8 @@
 } 
 
 @mixin dt-bodyCopy {
-    @include regular;
-    font-size: 0.9rem;
+    @include demi;
+    font-size: 1rem;
     line-height: 1.5rem;
 } 
 
@@ -112,6 +113,13 @@
     line-height: 1rem;
 } 
 
+@mixin dt-quoteBlock {
+    @include bold;
+    color: $black;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: justify;
+}
 
 // Buttons
 
@@ -119,9 +127,13 @@
     background-color: $black;
     color: $white;
     height: 54px;
+
+    width: auto;
     border: none;
     border-radius: 4px;
+    line-height: 1.3rem;
     font-size: 1.3rem;
+    // padding: 0 1rem;
 }
 
 //for above button On hover

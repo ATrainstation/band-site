@@ -1,20 +1,23 @@
 .hero {
     display: flex;
     align-items: center;
-    height: 32vh;
-    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    height: 38vh;
+    // min-height: 50vh;
+    background: linear-gradient(rgba($black, 0.5), rgba($black, 0.5)),
         url("../assets/images/hero-bio.jpg");
+    
     background-size: cover;
     margin: 0;
 
     &__title {
         @include pageHeader;
         color: $white;
+        // padding-top: $maxSpace;
         padding-left: 1rem;
     }
 
     @media (min-width: 768px) {
-        height: 68vh;
+        height: 60vh;
 
         &__title {
             @include dt-pageHeader;
@@ -24,7 +27,7 @@
     }
 
     @media (min-width: 1280px) {
-        height: 98vh;
+        height: 90vh;
 
         &__title {
             @include dt-pageHeader;
@@ -32,35 +35,47 @@
         }
     }
 
+
   // Modifier for Hero section on homepage
  &--shows {
+    flex-direction: column;
+    height: auto;
     background: linear-gradient(rgba($black, 0.5), rgba($black, 0.5)),
         url("../../assets/images/hero-shows.jpg");
     background-size: cover;
     margin: 0;
     padding: 2rem 1rem;
+    align-items: flex-start;
+
+    &__iframe {
+        display: flex;
+        width: 100%;
+    }
+
+    &__title__container {
+
+    max-width: 85%;
+    }
 
     &__title {
         @include pageHeader;
         color: $white;
-        width: 70%;
-        padding-bottom: 1.5rem;
+        width: 60%;
+        padding-bottom: $maxSpace;
 
         &__album {
             @include subHeader;
             font-weight: 400;
             color: $alabaster;
             padding-top: 1.5rem;
-            padding-bottom: 1rem;
+            padding-bottom: $spacer;
         }
 
 }
 
 @media (min-width: 768px) {
     display: flex;
-    flex-wrap: wrap;
     @include horiSpace($maxSpace);
-    height: auto;
     width: 100%;
 
     &__title {
@@ -72,14 +87,44 @@
         }
     }
 
-    .hero--shows{
-    padding-bottom: $maxSpace;
+    &__iframe {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding-right: 40%;
+    }
+
+    iframe {
+        justify-self: left;
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    @include horiSpace($maxSpace*2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    height: 90vh;
+
+    &__title {
+        @include dt-pageHeader;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+    }
 
     &__iframe {
-        width: 65%;
+        padding-right: 0;
+        width: 50%;
     }
 }
-}
- }}
 
-    
+ }
+}

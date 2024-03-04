@@ -116,11 +116,16 @@ async function openPosts() {
     deleteButton.dataset.commentId = comment.id;
 
     // Like Button
-    const likeButton = document.createElement("button");
-    likeButton.className = "comments__like";
-    likeButton.textContent = "LIKE";
+    // const likeButton = document.createElement("button");
+    // likeButton.className = "comments__like";
 
-    likeButton.dataset.commentId = comment.id;
+    const likeThumb = document.createElement("img");
+    likeThumb.src = "assets/Icons/like/thumbs-up.png"
+    likeThumb.className = "comments__like-thumb";
+
+    // likeButton.textContent = "LIKE";
+
+    likeThumb.dataset.commentId = comment.id;
 
     // Delete Api interaction
     deleteButton.addEventListener("click", async function (deletePost) {
@@ -131,18 +136,50 @@ async function openPosts() {
       openPosts();
     });
 
-    article.appendChild(deleteButton);
+    const buttonContainer = document.createElement("div");
+    buttonContainer.className = "comments__button-container";
 
-    // Like api Interaction
-    likeButton.addEventListener("click", async function (likePost) {
-      const commentIdToLike = likePost.target.dataset.commentId;
-      const likePostResponse = await api.likeComment(commentIdToLike);
+    const likeContainer = document.createElement("div");
+    const likeDisplay = document.createElement("p");
+    likeDisplay.className = "comments__like-display"
 
-      clearPosts();
-      openPosts();
-    });
 
-    article.appendChild(likeButton);
+    likeContainer.className = "comments__like-container";
+    buttonContainer.appendChild(likeContainer);
+    
+
+    article.appendChild(buttonContainer);
+    buttonContainer.appendChild(deleteButton);
+    
+    
+    likeThumb.addEventListener("click", async function () {
+      if (!likeThumb.classList.contains("clicked")) {
+          likeThumb.classList.add("clicked");
+  
+          // Like API Interaction
+          try {
+              const commentIdToLike = likeThumb.dataset.commentId; // Assuming dataset is set correctly
+              const likePostResponse = await api.likeComment(commentIdToLike);
+              console.log(likePostResponse);
+  
+              // Update UI or do any other necessary tasks
+              likeThumb.style.content = "url('../assets/Icons/like/thumbs-up-done.png')";
+              console.log(comment.likes);
+          } catch (error) {
+              console.error('Error liking comment: Try Again', error);
+          }
+      }
+      setTimeout(function() {
+        clearPosts();
+        openPosts();
+    }, 400);
+  });
+
+    // buttonContainer.appendChild(likeButton);
+    buttonContainer.appendChild(likeThumb);
+    buttonContainer.appendChild(likeDisplay);
+    likeDisplay.textContent = `Likes: ${comment.likes}`;
+
     posted.appendChild(article);
 
     const divider = document.createElement("div");

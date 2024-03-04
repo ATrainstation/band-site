@@ -1,166 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../scss/main.css" type="text/css">
-    <link rel="stylesheet" href="../assets/font/AvenirNextLTPro-Regular.otf">
-    <link rel="stylesheet" href="../assets/font/AvenirNextLTPro-demi.otf">
-    <link rel="stylesheet" href="../assets/font/AvenirNextLTPro-bold.otf">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" defer></script>
-    <script src="../scripts/band-site-api.js"  defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/font/AvenirNextLTPro-Regular.otf" />
+    <link rel="stylesheet" href="../assets/font/AvenirNextLTPro-demi.otf" />
+    <link rel="stylesheet" href="../assets/font/AvenirNextLTPro-bold.otf" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+      defer
+    ></script>
+    <script src="../scripts/band-site-api.js" defer></script>
     <script src="../scripts/build-shows-page.js" defer></script>
     <title>The Bees Knees: Shows</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <section class="nav">
-            <div class="nav__title">
-                <a href="index.html"><img src="../assets/logo/Logo-bandsite.svg" /></a>
-            </div>
+      <section class="nav">
+        <div class="nav__title">
+          <a href="index.html"
+            ><img src="../assets/logo/Logo-bandsite.svg"
+          /></a>
+        </div>
 
-            <ul class="nav__links">
-                <a href="../index.html" class="nav__link">
-                    <li class="nav__page nav__page--inactive">Biography</li>
-                </a>
-                <a href="shows.html" class="nav__link">
-                    <li class="nav__page nav__page--active">Shows</li>
-                </a>
-            </ul>
+        <ul class="nav__links">
+          <a href="../index.html" class="nav__link">
+            <li class="nav__page nav__page--inactive">Biography</li>
+          </a>
+          <a href="shows.html" class="nav__link">
+            <li class="nav__page nav__page--active">Shows</li>
+          </a>
+        </ul>
+      </section>
 
-        </section>
+      <div class="spacer"></div>
 
-        <div class="spacer"></div>
+      <section class="hero hero--shows">
+        <div class="hero--shows__title__container">
+          <h2 class="hero--shows__title__album">Beautiful Beasts Album</h2>
+          <h1 class="hero--shows__title">Stripes of Yellow x
+            For The Stings</h1>
+        </div>
 
-        <section class="hero--shows">
-            <div >
-                <h2 class="hero--shows__title__album">Beautiful Beasts Album</h2>
-                <h1 class="hero--shows__title">Stripes of Yellow x 
-                    For The Stings</h1>
-            </div>
-
-            <div class="hero--shows__iframe">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/175438456&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-        </iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-            </div>
-            
-    </section>
+        <div class="hero--shows__iframe">
+            <!-- <h1 style="color: white">terst grgsrgsrg</h1> -->
+          <iframe
+            height="166"
+            width="100%"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/175438456&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          >
+          </iframe>
+          <!-- <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div> -->
+        </div>
+      </section>
     </header>
 
     <main>
-        <section class="shows">
-            <h2 class="shows__title">
-                Shows
-            </h2>
-<div class="shows-list">
+      <section class="shows">
+        <h2 class="shows__title">Shows</h2>
+        
+        <div class="shows-list">
             <div class="dt-shows__headers">
-                <h4 class="dt-shows__headers--date">DATE</h4>
-                <h4 class="dt-shows__headers--venue">VENUE</h4>
-                <h4 class="dt-shows__headers--loca">LOCATION</h4>
-                <div class="dt-shows__headers--butt">
-                    </div>
-            </div>
-
-            <div class="shows__gigs">
-                <div class="shows__gig">
-
-                   
-
-                    <div class="shows__gig__cont shows__gig__cont--big">
-                        <h4 class="shows__gig__header">DATE</h4>
-                        <p class="shows__gig__date">Placeholder</p>
-                    </div>
+                <div class="shows__gig__cont dt-shows__headers--date"><h4 class="">DATE</h4></div>
     
-                    <div class="shows__gig__cont">
-                        <h4 class="shows__gig__header">VENUE</h4>
-                        <p class="shows__gig__venue">Placeholder</p>
-                    </div>
+                <div class="shows__gig__cont dt-shows__headers--venue"><h4 class="dt-shows__headers--venue">VENUE</h4></div>
     
-                    <div class="shows__gig__cont shows__gig__cont">
-                        <h4 class="shows__gig__header">LOCATION</h4>
-                        <p class="shows__gig__location">Placeholder</p>
-                    </div>
-                    
-                    <div class="shows__gig__button__cont shows__gig__cont--med">
-                    <button class="shows__gig__button">BUY TICKETS</button>
-                    </div>
-                    
-                    </div>
-                    <div class="divider divider--full"></div>
+                <div class="shows__gig__cont dt-shows__headers--loca"><h4 class="dt-shows__headers--loca">LOCATION</h4></div>
+
+                <div class="shows__gig__button__cont">
+                    <button class="shows__gig__button--hide">BUY TICKETS</button>
                 </div>
             </div>
-        </section>
+        
 
+          <div class="shows__gigs">
+            <div class="shows__gig">
+              <div class="shows__gig__cont--date ">
+                <h4 class="shows__gig__header">DATE</h4>
+                <p class="shows__gig__date">Placeholder</p>
+              </div>
+
+              <div class="shows__gig__cont--venue">
+                <h4 class="shows__gig__header">VENUE</h4>
+                <p class="shows__gig__venue">Placeholder</p>
+              </div>
+
+              <div class="shows__gig__cont--loca">
+                <h4 class="shows__gig__header">LOCATION</h4>
+                <p class="shows__gig__location">Placeholder</p>
+              </div>
+
+              <div class="shows__gig__button__cont">
+                <button class="shows__gig__button">BUY TICKETS</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <article class="social">
-            <h2 class="social__title">
-                <a href="mailto:info@thebeesknees.com">Get in Touch</a>
-            </h2>
-            <div class="social__icons">
-                <a href="https:/www.instagram.com"><img class="social__icon" src="../assets/Icons/SVG/Icon-instagram.svg" /></a>
-                <a href="https:/www.facebook.com"><img class="social__icon" src="../assets/Icons/SVG/Icon-facebook.svg" /></a>
-                <a href="https:/www.twitter.com"><img class="social__icon" src="../assets/Icons/SVG/Icon-twitter.svg" /></a>
-            </div>
-        </article>
+      <article class="social">
+        <h2 class="social__title">
+          <a href="mailto:info@thebeesknees.com">Get in Touch</a>
+        </h2>
+        <div class="social__icons">
+          <a href="https:/www.instagram.com"
+            ><img
+              class="social__icon"
+              src="../assets/Icons/SVG/Icon-instagram.svg"
+          /></a>
+          <a href="https:/www.facebook.com"
+            ><img
+              class="social__icon"
+              src="../assets/Icons/SVG/Icon-facebook.svg"
+          /></a>
+          <a href="https:/www.twitter.com"
+            ><img
+              class="social__icon"
+              src="../assets/Icons/SVG/Icon-twitter.svg"
+          /></a>
+        </div>
+      </article>
 
-        <article class="footer__assoc">
-            <div class="footer__info">
-                <h3 class="footer__info__name">
-                    The Bees Knees Management
-                </h3>
-                <p class="footer__info__area">
-                    <a href="https://maps.app.goo.gl/Qtqjt4DyVS9gLVk7A" target="_blank">
-                        503 Broadway Penthouse,
-                        <br>
-                        New York, NY 10012, USA
-                    </a>
-                </p>
-                <p class="footer__info__email"><a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
-            </div>
-
-            <div class="footer__info">
-                <h3 class="footer__info__name">
-                    Limitless Artist Group
-                </h3>
-                <p class="footer__info__area">
-                    Booking Agent for
-                    <br>
-                    US / South America / Japan
-                </p>
-                <p class="footer__info__email"><a href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a></p>
-            </div>
-
-            <div class="footer__info">
-                <h3 class="footer__info__name">
-                    ARCH Entertainment
-                </h3>
-                <p class="footer__info__area">
-                    Booking Agent for
-                    <br>
-                    UK / EU / AU
-                </p>
-                <p class="footer__info__email"><a href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a></p>
-            </div>
-        </article>
-
-        <div class="footer__container__logo">
-            <a href="../index.html"><img class="footer__logo" src="../assets/logo/Logo-bandsite.svg" /></a>
+      <article class="footer__assoc">
+        <div class="footer__info">
+          <h3 class="footer__info__name">The Bees Knees Management</h3>
+          <p class="footer__info__area">
+            <a href="https://maps.app.goo.gl/Qtqjt4DyVS9gLVk7A" target="_blank">
+              503 Broadway Penthouse,
+              <br />
+              New York, NY 10012, USA
+            </a>
+          </p>
+          <p class="footer__info__email">
+            <a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+          </p>
         </div>
 
-        <div class="footer__copyright">
-            <p>Copyright The Bees Knees © 2024 All Rights Reserved</p>
+        <div class="footer__info">
+          <h3 class="footer__info__name">Limitless Artist Group</h3>
+          <p class="footer__info__area">
+            Booking Agent for
+            <br />
+            US / South America / Japan
+          </p>
+          <p class="footer__info__email">
+            <a href="mailto:bookings@limitlessag.com"
+              >bookings@limitlessag.com</a
+            >
+          </p>
         </div>
+
+        <div class="footer__info">
+          <h3 class="footer__info__name">ARCH Entertainment</h3>
+          <p class="footer__info__area">
+            Booking Agent for
+            <br />
+            UK / EU / AU
+          </p>
+          <p class="footer__info__email">
+            <a href="mailto:bookings@archentertainment.com"
+              >bookings@archentertainment.com</a
+            >
+          </p>
+        </div>
+      </article>
+
+      <div class="footer__container__logo">
+        <a href="../index.html"
+          ><img class="footer__logo" src="../assets/logo/Logo-bandsite.svg"
+        /></a>
+      </div>
+
+      <div class="footer__copyright">
+        <p>Copyright The Bees Knees © 2024 All Rights Reserved</p>
+      </div>
     </footer>
-    
-</body>
-
-
-
+  </body>
 </html>

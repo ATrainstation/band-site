@@ -1,0 +1,155 @@
+.dt-shows__headers {
+    display: none;
+  }
+  
+  .shows {
+    margin-top: 1rem;
+  
+    &__title {
+      @include sectionHeader;
+      @include headSpace;
+      @include horiMarg($largeSpace);
+      color: black;
+    }
+  
+    &__gig {
+      @include horiSpace($largeSpace);
+
+      &:hover {
+        background-color: $alabaster;
+      }
+
+      &:active {
+        background-color: $silver;
+      }
+  
+      &__cont {
+        @include vertSpace($smallSpace);
+      }
+  
+      &__header {
+        @include special-text(0.8rem);
+        color: $silver;
+        padding-bottom: $smallSpace;
+      }
+  
+      &__date {
+        @include subHeader;
+        color: $black;
+        font-weight: 700;
+      }
+  
+      &__venue,
+      &__location {
+        @include dt-bodyCopy;
+        color: $darkblk;
+      }
+  
+      &__button__cont {
+        display: flex;
+      }
+  
+      &__button {
+        @include button($black);
+        width: 100%;
+        margin: $smallSpace;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      &__title {
+        @include dt-sectionHeader;
+        @include dt-headSpace;
+        color: black;
+      }
+  
+      &__gig {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+  
+        &__cont {
+          &--date {
+            width: 35%;
+          }
+  
+          &--venue,
+          &--loca {
+            width: 25%;
+          }
+  
+          &__button {
+            // width: auto;
+          }
+        }
+  
+        &__button--hide {
+          display: none;
+        }
+  
+        &__header {
+          @include special-text(0.8rem);
+          color: $silver;
+          display: none;
+        }
+  
+        &__button {
+          @include button($black);
+          padding: 1rem 4rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {  
+    .dt-shows__headers {
+      @include special-text();
+      color: silver;
+  
+      @include horiMarg($largeSpace);
+  
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 55%;
+  
+      &--date {
+        width: 30%;
+      }
+  
+      &--venue {
+        width: 20%;
+      }
+
+      &--loca {
+     
+      }
+  
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .shows {
+      display: flex;
+      @include horiMarg($maxSpace*3);
+  
+      &__title {
+        width: 20%;
+      }
+    }
+  
+    .shows-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .dt-shows__headers {
+      flex-direction: row;
+      width: 65%;
+    }
+  }

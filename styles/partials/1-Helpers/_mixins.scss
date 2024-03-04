@@ -80,8 +80,8 @@
 
 @mixin dt-sectionHeader {
     @include bold;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
 } 
 
 @mixin dt-subHeader {
@@ -91,9 +91,9 @@
 } 
 
 @mixin dt-bodyCopy {
-    @include demi;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    @include regular;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
 } 
 
 @mixin dt-footerCopy {
@@ -113,8 +113,8 @@
 @mixin dt-quoteBlock {
     @include bold;
     color: $black;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 2.6rem;
     text-align: justify;
 }
 

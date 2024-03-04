@@ -114,11 +114,11 @@ body {
     }
 
     @media (min-width: $desktop) {
-        padding: 0 $maxSpace*3.5;
+        padding: 0 $maxSpace*4;
         @include dt-sectionHeader;
 
         &__title {
-            padding-bottom: $xlargeSpace;
+            padding-bottom: $maxSpace;
         }
 
         &__image {
@@ -129,7 +129,7 @@ body {
         &__quote {
             @include dt-quoteBlock;
             padding: $xlargeSpace $maxSpace*2;
-            width: 85%;
+            width: 80%;
         }
 
         &__bio {
@@ -267,7 +267,7 @@ body {
         // }
     &__like-container {
         display: flex;
-        align-self: center;
+        align-items: center;
         }
 
     &__like-thumb {
@@ -278,7 +278,9 @@ body {
         padding-bottom: 1rem;
         align-self: center;
     
-     
+        &:hover{
+            cursor: pointer;
+        }
     
         &.clicked {
             animation: likeAnimation 0.4s;

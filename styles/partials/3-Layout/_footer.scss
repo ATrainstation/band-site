@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    @include light-OnDark($mercury);
+    @include light-OnDark($white);
 
     & a {
-        color: $mercury;
+        color: $white;
         text-decoration: none;
         transition: color 0.35s ease-in-out;
 

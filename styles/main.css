@@ -152,6 +152,7 @@ h4 {
 .nav__title img {
   min-height: 20px;
   min-width: 120px;
+  padding-bottom: 0.5rem;
 }
 .nav__page {
   background-color: #323232;
@@ -398,10 +399,10 @@ h4 {
   flex-direction: column;
   padding: 1rem;
   background-color: #323232;
-  color: #E1E1E1;
+  color: #FFF;
 }
 .footer a {
-  color: #E1E1E1;
+  color: #FFF;
   text-decoration: none;
   transition: color 0.35s ease-in-out;
 }
@@ -517,8 +518,8 @@ h4 {
   width: 100%;
   padding-bottom: 1.5rem;
   font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 2.6rem;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
 }
 .social__icons {
   display: flex;
@@ -625,8 +626,8 @@ h4 {
   }
   .about__title {
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
     padding-top: 3rem;
     padding-bottom: 1.5rem;
   }
@@ -664,20 +665,20 @@ h4 {
     padding-bottom: 1rem;
   }
   .about__bio__paras p {
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 }
 @media (min-width: 1280px) {
   .about {
-    padding: 0 10.5rem;
+    padding: 0 12rem;
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
   }
   .about__title {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
   .about__image {
     aspect-ratio: 16/7;
@@ -686,11 +687,11 @@ h4 {
   .about__quote {
     font-weight: 700;
     color: #323232;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 2.6rem;
     text-align: justify;
     padding: 2rem 6rem;
-    width: 85%;
+    width: 80%;
   }
   .about__bio {
     padding: 0 6rem;
@@ -731,8 +732,8 @@ h4 {
 @media (min-width: 768px) {
   .gallery__title {
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
     padding-top: 3rem;
     padding-bottom: 1.5rem;
     padding-left: 3.55vw;
@@ -821,7 +822,7 @@ h4 {
 }
 .comments__like-container {
   display: flex;
-  align-self: center;
+  align-items: center;
 }
 .comments__like-thumb {
   height: 5rem;
@@ -830,6 +831,9 @@ h4 {
   margin-bottom: 3;
   padding-bottom: 1rem;
   align-self: center;
+}
+.comments__like-thumb:hover {
+  cursor: pointer;
 }
 .comments__like-thumb.clicked {
   animation: likeAnimation 0.4s;
@@ -1036,8 +1040,8 @@ h4 {
   }
   .comments__header {
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
   }
   .comments__new-post {
     padding-left: 9rem;
@@ -1095,9 +1099,9 @@ h4 {
   font-weight: 700;
 }
 .shows__gig__venue, .shows__gig__location {
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   color: #000;
 }
 .shows__gig__button__cont {
@@ -1121,8 +1125,8 @@ h4 {
 @media (min-width: 768px) {
   .shows__title {
     font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
     padding-top: 3rem;
     padding-bottom: 2rem;
     color: black;
@@ -1137,6 +1141,9 @@ h4 {
   }
   .shows__gig__cont {
     width: 9rem;
+  }
+  .shows__gig__cont--loca {
+    width: 11rem;
   }
   .shows__gig__cont--button {
     width: 12rem;

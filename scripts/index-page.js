@@ -181,8 +181,9 @@ async function openPosts() {
   });
 
     // buttonContainer.appendChild(likeButton);
-    buttonContainer.appendChild(likeThumb);
-    buttonContainer.appendChild(likeDisplay);
+    buttonContainer.appendChild(likeContainer);
+    likeContainer.appendChild(likeThumb);
+    likeContainer.appendChild(likeDisplay);
     // likeDisplay.textContent = `Likes: ${comment.likes}`;
 
     posted.appendChild(article);
